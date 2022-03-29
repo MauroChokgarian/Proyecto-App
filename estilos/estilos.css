@@ -1,0 +1,762 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62,5%; /*Cambiamos la etiqueta raiz y ahora se cuenta de 10px en 10px*/
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+    scroll-behavior: smooth;
+}
+
+ul{
+    list-style-type: none; /*Sacamos los bullets de las listas*/
+}
+
+a{
+    text-decoration: none; /*Sacamos el subrayado en los enlaces*/
+    color: white;
+}
+a:hover{
+    border:2px solid white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Pagina index */
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.15fr 0.7fr 1fr 1fr 0.3fr 0.2fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "logo logo navegacion navegacion"
+    "nombreApp nombreApp imagenProducto imagenProducto"
+    "problema problema imagenProblema imagenProblema"
+    "imagenSolucion imagenSolucion textoSolucion textoSolucion"
+    "banner banner banner banner"
+    "footer footer api api";
+}
+@media screen and (max-width: 768px){
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.15fr 0.3fr 1fr 1fr 0.3fr 0.2fr;
+    grid-template-areas:
+    "logo navegacion navegacion"
+    "nombreApp imagenProducto imagenProducto"
+    "problema problema imagenProblema"
+    "imagenSolucion textoSolucion textoSolucion"
+    "banner banner banner banner"
+    "footer footer api";
+  }
+
+  .logoIndex{
+    grid-area: logo;
+  }
+  .headerIndex{
+    grid-area: navegacion;
+    display: inline;
+  }
+  .headerIndex ul{
+    display: flex;
+    flex-direction: column;
+  }
+  .titulo-principal{
+    grid-area: nombreApp;
+  }
+  .titulo-principal h1{
+    display: flex;
+    justify-content: center;
+  }
+  .imagenProducto{
+    grid-area: imagenProducto;
+  }
+}
+
+.logoIndex{
+  grid-area: logo;
+  background-color: #222121;
+}
+
+.headerIndex{
+  grid-area: navegacion;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #222121;
+}
+
+.headerIndex li{
+  display: inline-block;
+  font-size: 1.3rem;
+  padding-right: 10px;
+  padding-top: 20px
+}
+
+/* Encabezado */
+.titulo-principal{
+  grid-area: nombreApp;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+.titulo-principal h1{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  padding-left: 100px;
+}
+
+.titulo-principal p{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+  padding-left: 100px;
+  padding-right: 30px;
+
+}
+.titulo-principal a{
+  display: inline-block;
+  width: max-content;
+  margin-left: 100px;
+}
+
+.imagenProducto {
+  grid-area: imagenProducto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+.imagenProducto_in{
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  padding: 10px
+}
+
+.imagenProducto_in img{
+  display: flex;
+  width: 50%;
+  align-self: center;
+  margin: auto;
+}
+
+/* Problema */
+.problema{
+  grid-area: problema;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #161515;
+}
+
+.problema h1{
+  font-size: 1.5rem;
+  padding-left: 100px;
+  padding-right: 30px;
+  margin-bottom: 20px;
+}
+
+.problema p{
+  font-size: 1.2rem;
+  padding-left: 100px;
+  padding-right: 30px;
+  margin-bottom: 30px;
+}
+
+.problema ul{
+  list-style-type: circle;
+  padding-left: 100px;
+  line-height: 1.8;
+}
+
+.imagenProblema{
+  grid-area: imagenProblema;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #161515;
+  
+}
+
+.imagenProblema img{
+  width: 99%;
+  border: white solid;
+  border-radius: 10px;
+
+  
+}
+
+/* Solucion */
+.imagenSolucion{
+  grid-area: imagenSolucion;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.imagenSolucion img{
+  display: flex;
+  width:33%;
+  padding: 20px 0;
+}
+
+.textoSolucion{
+  grid-area: textoSolucion;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.textoSolucion h1{
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  
+}
+
+.textoSolucion ul{
+  list-style-type: circle;
+  line-height: 1.8;
+  
+}
+
+/* Banner */
+
+.banner{
+  grid-area: banner;
+  background:url("../multimedia/banner.png") no-repeat center fixed;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.banner h1{
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.banner p{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.banner a{
+  width: max-content;
+  margin: auto;
+}
+
+/* Footer index */
+
+.footer{
+  grid-area: footer;
+  color: white;
+  background-color: #161515;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer h1{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  padding-left: 100px;
+}
+.footer p{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px;
+  margin-bottom: 15px;
+  width: 300px;
+}
+
+.api{
+  grid-area: api;
+  background-color: #161515;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.api h1{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px;
+  margin-bottom: 15px;
+}
+
+.api ul{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px;
+}
+
+/* Pagina Contacto */
+.containerContacto {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.15fr 1fr 0.2fr ;
+  gap: 0px 0px;
+  grid-template-areas:
+    "logo logo navegacion navegacion"
+    "contacto contacto contacto contacto"
+    "footer footer api api";
+}
+
+
+.logoContacto{
+  grid-area: logo;
+  background-color: #222121;
+}
+
+.headerContacto{
+  grid-area: navegacion;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #222121;
+}
+
+.headerContacto li{
+  display: inline-block;
+  font-size: 1.3rem;
+  padding-right: 10px;
+  padding-top: 20px
+}
+
+/* Formulario */
+
+.contacto{
+  grid-area: contacto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.contacto h1{
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 20px;
+
+}
+.contacto p{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.contacto form{
+  text-align: center;
+}
+
+.nombre{
+  width: 400px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.correo{
+  width: 400px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.mensaje{
+  width: 400px;
+  height: 200px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.enviar{
+  width: 400px;
+  padding: 8px;
+  margin-bottom: 100px;
+  border-radius: 10px;
+}
+
+
+/* Footer Contacto*/
+
+.footer{
+  grid-area: footer;
+  color: white;
+  background-color: #161515;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer h1{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  padding-left: 100px;
+}
+.footer p{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px;
+  margin-bottom: 15px;
+  width: 300px;
+}
+
+.api{
+  grid-area: api;
+  background-color: #161515;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.api h1{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px;
+  margin-bottom: 15px;
+}
+
+.api ul{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px;
+}
+
+/* Pagina Mercado */
+
+.containerMercado {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.15fr 0.8fr 1fr 1fr 1fr 0.2fr ;
+  gap: 0px 0px;
+  grid-template-areas:
+    "logo logo navegacion navegacion"
+    "bannerMercado bannerMercado bannerMercado bannerMercado"
+    "imagenEncuesta1 conclusion1 imagenEncuesta2 conclusion2"
+    "imagenEncuesta3 conclusion3 imagenEncuesta4 conclusion4"
+    "imagenEncuesta5 conclusion5 imagenEncuesta6 conclusion6"
+    "footer footer api api";
+}
+
+.logoMercado{
+  grid-area: logo;
+  background-color: #222121;
+}
+
+.headerMercado{
+  grid-area: navegacion;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #222121;
+}
+
+.headerMercado li{
+  display: inline-block;
+  font-size: 1.3rem;
+  padding-right: 10px;
+  padding-top: 20px
+}
+
+.bannerMercado{
+  grid-area: bannerMercado;
+  background-image:url("../multimedia/mercado.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+}
+.bannerMercado h1{
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.bannerMercado p{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.bannerMercado a{
+  width: max-content;
+  position: relative;
+  left: 565px;
+}
+
+
+/* Footer Mercado */
+.footer{
+  grid-area: footer;
+  color: white;
+  background-color: #161515;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer h1{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  padding-left: 100px;
+}
+.footer p{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px;
+  margin-bottom: 15px;
+  width: 300px;
+}
+
+.api{
+  grid-area: api;
+  background-color: #161515;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.api h1{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px;
+  margin-bottom: 15px;
+}
+
+.api ul{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px;
+}
+
+/* Encuesta1 */
+
+.imagenEncuesta1 {
+  grid-area: imagenEncuesta1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.imagenEncuesta1 img{
+  width: 350px;
+}
+.conclusion1{
+  grid-area: conclusion1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+}
+
+/* Encuesta2 */
+
+.imagenEncuesta2 {
+  grid-area: imagenEncuesta2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.imagenEncuesta2 img{
+  width: 350px;
+}
+.conclusion2{
+  grid-area: conclusion2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+}
+
+/* Encuesta3 */
+
+.imagenEncuesta3 {
+  grid-area: imagenEncuesta3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.imagenEncuesta3 img{
+  width: 350px;
+}
+.conclusion3{
+  grid-area: conclusion3;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+}
+
+/* Encuesta4 */
+
+.imagenEncuesta4 {
+  grid-area: imagenEncuesta4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.imagenEncuesta4 img{
+  width: 350px;
+}
+.conclusion4{
+  grid-area: conclusion4;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+}
+
+/* Encuesta5 */
+
+.imagenEncuesta5 {
+  grid-area: imagenEncuesta5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.imagenEncuesta5 img{
+  width: 350px;
+}
+.conclusion5{
+  grid-area: conclusion5;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+}
+
+/* Encuesta6 */
+
+.imagenEncuesta6 {
+  grid-area: imagenEncuesta6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.imagenEncuesta6 img{
+  width: 350px;
+}
+.conclusion6{
+  grid-area: conclusion6;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+}
+
+/* Pagina Equipo */
+
+.containerEquipo {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.15fr 1.5fr 1fr 1fr 1fr 0.2fr ;
+  gap: 0px 0px;
+  grid-template-areas:
+    "logo logo navegacion navegacion"
+    "none none none none "
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    "footer footer api api";
+}
+
+.logoEquipo{
+  grid-area: logo;
+  background-color: #222121;
+}
+
+.headerEquipo{
+  grid-area: navegacion;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #222121;
+}
+
+.headerEquipo li{
+  display: inline-block;
+  font-size: 1.3rem;
+  padding-right: 10px;
+  padding-top: 20px
+}
+
+
+
+
+.containerProducto {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.15fr 1.5fr 1fr 1fr 1fr 0.2fr ;
+  gap: 0px 0px;
+  grid-template-areas:
+    "logo logo navegacion navegacion"
+    ". . . . "
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    "footer footer api api";
+}
+
+.logoProducto{
+  grid-area: logo;
+  background-color: #222121;
+}
+
+.headerProducto{
+  grid-area: navegacion;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #222121;
+}
+
+.headerProducto li{
+  display: inline-block;
+  font-size: 1.3rem;
+  padding-right: 10px;
+  padding-top: 20px
+}
+
