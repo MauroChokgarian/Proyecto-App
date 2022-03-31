@@ -27,7 +27,7 @@ a:hover{
 /* Pagina index */
 .container {  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.15fr 0.7fr 1fr 1fr 0.8fr 0.2fr;
+  grid-template-rows: 0.15fr 1fr 1fr 1fr 0.8fr 0.2fr;
   gap: 0px 0px;
   grid-template-areas:
     "logo logo navegacion navegacion"
@@ -36,42 +36,6 @@ a:hover{
     "imagenSolucion imagenSolucion textoSolucion textoSolucion"
     "banner banner banner banner"
     "footer footer api api";
-}
-@media screen and (max-width: 768px){
-  .container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.15fr 0.3fr 1fr 1fr 0.3fr 0.2fr;
-    grid-template-areas:
-    "logo navegacion navegacion"
-    "nombreApp imagenProducto imagenProducto"
-    "problema problema imagenProblema"
-    "imagenSolucion textoSolucion textoSolucion"
-    "banner banner banner banner"
-    "footer footer api";
-  }
-
-  .logoIndex{
-    grid-area: logo;
-  }
-  .headerIndex{
-    grid-area: navegacion;
-    display: inline;
-  }
-  .headerIndex ul{
-    display: flex;
-    flex-direction: column;
-  }
-  .titulo-principal{
-    grid-area: nombreApp;
-  }
-  .titulo-principal h1{
-    display: flex;
-    justify-content: center;
-  }
-  .imagenProducto{
-    grid-area: imagenProducto;
-  }
 }
 
 .logoIndex{
@@ -135,7 +99,9 @@ a:hover{
   width: 100%;
   float: left;
   box-sizing: border-box;
-  padding: 10px
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .imagenProducto_in img{
@@ -143,6 +109,10 @@ a:hover{
   width: 50%;
   align-self: center;
   margin: auto;
+}
+
+.imagenProducto_in img:hover{
+  transform: scale(1.5);
 }
 
 /* Problema */
@@ -186,9 +156,7 @@ a:hover{
 .imagenProblema img{
   width: 99%;
   border: white solid;
-  border-radius: 10px;
-
-  
+  border-radius: 10px;  
 }
 
 /* Solucion */
@@ -196,14 +164,28 @@ a:hover{
   grid-area: imagenSolucion;
   display: flex;
   flex-direction: row;
-  width: 100%;
-  box-sizing: border-box;
+  justify-content: center;
 }
 
-.imagenSolucion img{
+.imagenSolucion_in{
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  padding: 20px;
   display: flex;
-  width:33%;
-  padding: 20px 0;
+  flex-direction: column;
+}
+
+.imagenSolucion_in img{
+  display: flex;
+  width: 80%;
+  align-self: center;
+  margin: auto;
+}
+
+.imagenSolucion_in img:hover{
+  transform: scale(1.5);
+  
 }
 
 .textoSolucion{
@@ -215,6 +197,8 @@ a:hover{
   padding-right: 30px;
   padding-left: 30px;
 }
+
+
 
 .textoSolucion h1{
   font-size: 1.5rem;
@@ -512,57 +496,6 @@ a:hover{
   left: 565px;
 }
 
-
-/* Footer Mercado */
-.footer{
-  grid-area: footer;
-  color: white;
-  background-color: #161515;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.footer h1{
-  display: flex;
-  justify-content: flex-start;
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  padding-left: 100px;
-}
-.footer p{
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 100px;
-  margin-bottom: 15px;
-  width: 300px;
-}
-
-.api{
-  grid-area: api;
-  background-color: #161515;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.api h1{
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 100px;
-  margin-bottom: 15px;
-}
-
-.api ul{
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 100px;
-}
-
 /* Encuesta1 */
 
 .imagenEncuesta1 {
@@ -681,6 +614,57 @@ a:hover{
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+
+/* Footer Mercado */
+.footer{
+  grid-area: footer;
+  color: white;
+  background-color: #161515;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer h1{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  padding-left: 100px;
+}
+.footer p{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px;
+  margin-bottom: 15px;
+  width: 300px;
+}
+
+.api{
+  grid-area: api;
+  background-color: #161515;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.api h1{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px;
+  margin-bottom: 15px;
+}
+
+.api ul{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px;
 }
 
 /* Pagina Equipo */
