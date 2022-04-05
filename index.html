@@ -6,103 +6,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="estilos/estilos.css"> <!--Insertamos CSS en el HTML-->
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="logoIndex">
-            <img src="#" alt="">
-        </div>
-        <header class="headerIndex"> <!-- Navegacion -->
-            <nav>
-                <ul>
-                    <li><a href="index.html"> Inicio </a> </li>
-                    <li><a href="paginas/mercado.html"> Mercado </a> </li>
-                    <li><a href="paginas/producto.html"> Producto</a></li>
-                    <li><a href="paginas/equipo.html"> Equipo</a></li>
-                    <li><a href="paginas/contacto.html"> Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
+    <div class="container-fluid">
+        <div class="row">
+            
+                <div class="logoIndex col-sm-12 col-md-6 col-lg-6">
+                    <img src="#" alt="">
+                </div>
 
-            <section class="titulo-principal"> <!-- Encabezado -->
+                <header class="headerIndex col-sm-12 col-md-6 col-lg-6"> <!-- Navegacion -->
+                    <nav>
+                        <ul>
+                            <li><a href="index.html"> Inicio </a> </li>
+                            <li><a href="paginas/mercado.html"> Mercado </a> </li>
+                            <li><a href="paginas/producto.html"> Producto</a></li>
+                            <li><a href="paginas/equipo.html"> Equipo</a></li>
+                            <li><a href="paginas/contacto.html"> Contacto</a></li>
+                        </ul>
+                    </nav>
+                </header>
+        </div>
+
+
+        <div class="row">
+            <section class="titulo-principal col-sm-12 col-md-6 col-lg-6"> <!-- Encabezado -->
                     <h1>MOOVI</h1>
                     <p>Ranking de peliculas y series basado en lo que vieron tus amigos</p>
                     <a class="tituloBoton" href="#info">¿Queres saber más?</a>
             </section>
-                <div class="imagenProducto">
+
+                <div class="imagenProducto col-sm-12 col-md-6 col-lg-6">
                     <div class="imagenProducto_in">
-                        <img src="multimedia/Home.png" alt="TuRanking">
+                        <img src="multimedia/Home.png" class="img-fluid" alt="TuRanking">
                     </div>
                     <div class="imagenProducto_in"> 
-                        <img src="multimedia/Home2.png" alt="TuRanking2">
+                        <img src="multimedia/Home2.png" class="img-fluid" alt="TuRanking2">
                     </div>
                 </div>
+        </div>
 
-            <section class="problema" id="info"> <!-- Problema -->
-                <h1>El 74% de las personas confirman que no es sencillo elegir una pelicula o serie</h1>
-                <p>¿Cuáles son las razones?</p>
-                <ul>
-                    <li>La gran oferta que nos presentan las plataformas de streaming</li>
-                    <li>Las recomendaciones que hacen estas plataformas no son buenas</li>
-                    <li>Son indecios</li>
-                    <li>No suelen recordar que pelicula/serie les recomendaron</li>
-                </ul>
-            </section>
-
-            <div class="imagenProblema"> <!-- Imagen Problema -->
-                <img src="multimedia/imagenProblema.jpg" alt="Opciones">
-            </div>
-            
-
-            <div class="imagenSolucion"> <!--Imagen Solucion -->
-                <div class="imagenSolucion_in">
-                    <img src="multimedia/Compartir.png" alt="">
-                </div>
-                <div class="imagenSolucion_in">
-                    <img src="multimedia/Home.png" alt="">
-                </div>
-                <div class="imagenSolucion_in">
-                    <img src="multimedia/Buscador1.png" alt="">
-                </div>   
-            </div>
-
-            <div class="textoSolucion"> <!-- Texto Solucion -->
-                <h1> ¿Qué ofrece MOOVI?</h1>
-                <ul>
-                    <li>Ranking personalizado basado en las peliculas y series vistas por tus amigos</li>
-                    <li>Recomendación grupal para los momentos que estas acompañado y pinta mirar una pelicula</li>
-                    <li>Toda la información de peliculas y series en un solo lugar (tarilers, puntuación y hasta en que plataforma encontrarla)</li>
-                    <li>Recomendación directa entre tus amigos</li>
-                    <li>Registro de todas las peliculas y series vistas por vos y tus amigos</li>
-                </ul>
-            </div>
-
-            <section class="banner"> <!-- Banner -->
-                    <h1>MOOVI</h1>
-                    <p>No pierdas tiempo eligiendo que mirar, solo relajate y deja que "Nombre App" haga el trabajo por vos</p>
-                    <a class="tituloBoton" href="paginas/producto.html">¿Cómo funciona?</a>
-            </section>
-
-            <footer class="footer"> <!-- Footer -->
-                <h1>SOBRE NOSOTROS</h1>
-                <p>Somos un equipo apasionado por las peliculas y series dedicado a ayudarte a elegir la pelicula perfecta para vos </p>
-                <p>Contacto: chokgarianmauro@gmail.com</p>
-            </footer>
-        
-            <section class="api">
-                    <h1>API</h1>
+        <div class="row">
+                <section class="problema col-sm-12 col-md-6 col-lg-6" id="info"> <!-- Problema -->
+                    <h1>El 74% de las personas confirman que no es sencillo elegir una pelicula o serie</h1>
+                    <p>¿Cuáles son las razones?</p>
                     <ul>
-                        <li><a href="https://www.themoviedb.org/">TMDB</a></li>
+                        <li>La gran oferta que nos presentan las plataformas de streaming</li>
+                        <li>Las recomendaciones que hacen estas plataformas no son buenas</li>
+                        <li>Son indecios</li>
+                        <li>No suelen recordar que pelicula/serie les recomendaron</li>
                     </ul>
-            </section>
+                </section>
+            
+                <div class="imagenProblema col-sm-12 col-md-6 col-lg-6"> <!-- Imagen Problema -->
+                    <img src="multimedia/imagenProblema.jpg" alt="Opciones">
+                </div>
+        </div>
+
         
+        <div class="row">
+                <div class="imagenSolucion col-sm-12 col-md-6 col-lg-6"> <!--Imagen Solucion -->
+                    <div class="imagenSolucion_in">
+                        <img src="multimedia/Compartir.png" alt="">
+                    </div>
+                    <div class="imagenSolucion_in">
+                        <img src="multimedia/Home.png" alt="">
+                    </div>
+                    <div class="imagenSolucion_in">
+                        <img src="multimedia/Buscador1.png" alt="">
+                    </div>   
+                </div>
+            
+        
+
+                <div class="textoSolucion col-sm-12 col-md-6 col-lg-6"> <!-- Texto Solucion -->
+                    <h1> ¿Qué ofrece MOOVI?</h1>
+                    <ul>
+                        <li>Ranking personalizado basado en las peliculas y series vistas por tus amigos</li>
+                        <li>Recomendación grupal para los momentos que estas acompañado y pinta mirar una pelicula</li>
+                        <li>Toda la información de peliculas y series en un solo lugar (tarilers, puntuación y hasta en que plataforma encontrarla)</li>
+                        <li>Recomendación directa entre tus amigos</li>
+                        <li>Registro de todas las peliculas y series vistas por vos y tus amigos</li>
+                    </ul>
+                </div>
         </div>
 
 
+        <div class="row">
+                <section class="banner col-12"> <!-- Banner -->
+                        <h1>MOOVI</h1>
+                        <p>No pierdas tiempo eligiendo que mirar, solo relajate y deja que MOOVI haga el trabajo por vos</p>
+                        <a class="tituloBoton" href="paginas/producto.html">¿Cómo funciona?</a>
+                </section>
+        </div>
+
+        <div class="row">
             
+                <footer class="footerIndex col-sm-12 col-md-6 col-lg-6"> <!-- Footer -->
+                    <h1>SOBRE NOSOTROS</h1>
+                    <p>Somos un equipo apasionado por las peliculas y series dedicado a ayudarte a elegir la pelicula perfecta para vos </p>
+                    <p>Contacto: chokgarianmauro@gmail.com</p>
+                </footer>
+            
+                <section class="apiIndex col-sm-12 col-md-6 col-lg-6">
+                        <h1>API</h1>
+                        <ul>
+                            <li><a href="https://www.themoviedb.org/">TMDB</a></li>
+                        </ul>
+                </section>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>           
 
 </body>
 </html>

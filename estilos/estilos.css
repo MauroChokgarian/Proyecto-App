@@ -19,15 +19,16 @@ a{
     color: white;
 }
 a:hover{
-    border:2px solid white;
+    border:1px solid white;
     padding: 5px;
     border-radius: 5px;
+    color: red;
 }
 
 /* Pagina index */
-.container {  display: grid;
+/* .container {  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.15fr 1fr 1fr 1fr 0.8fr 0.2fr;
+  grid-template-rows: 0.15fr 0.8fr 0.7fr 1fr 0.8fr 0.2fr;
   gap: 0px 0px;
   grid-template-areas:
     "logo logo navegacion navegacion"
@@ -36,15 +37,13 @@ a:hover{
     "imagenSolucion imagenSolucion textoSolucion textoSolucion"
     "banner banner banner banner"
     "footer footer api api";
-}
+} */
 
 .logoIndex{
-  grid-area: logo;
   background-color: #222121;
 }
 
 .headerIndex{
-  grid-area: navegacion;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -60,11 +59,11 @@ a:hover{
 
 /* Encabezado */
 .titulo-principal{
-  grid-area: nombreApp;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: white;
+  background-color: #000000;
 }
 .titulo-principal h1{
   display: flex;
@@ -89,10 +88,10 @@ a:hover{
 }
 
 .imagenProducto {
-  grid-area: imagenProducto;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: #000000;
   
 }
 .imagenProducto_in{
@@ -106,18 +105,18 @@ a:hover{
 
 .imagenProducto_in img{
   display: flex;
-  width: 50%;
+  width: 60%;
   align-self: center;
-  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .imagenProducto_in img:hover{
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 /* Problema */
 .problema{
-  grid-area: problema;
   color: white;
   display: flex;
   flex-direction: column;
@@ -146,7 +145,6 @@ a:hover{
 }
 
 .imagenProblema{
-  grid-area: imagenProblema;
   display: flex;
   justify-content: flex-start;
   background-color: #161515;
@@ -161,10 +159,10 @@ a:hover{
 
 /* Solucion */
 .imagenSolucion{
-  grid-area: imagenSolucion;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: #000000;
 }
 
 .imagenSolucion_in{
@@ -180,7 +178,8 @@ a:hover{
   display: flex;
   width: 80%;
   align-self: center;
-  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
   
 }
 
@@ -190,13 +189,13 @@ a:hover{
 }
 
 .textoSolucion{
-  grid-area: textoSolucion;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-right: 30px;
   padding-left: 30px;
+  background-color: #000000;
 }
 
 
@@ -216,27 +215,25 @@ a:hover{
 /* Banner */
 
 .banner{
-  grid-area: banner;
   background:url("../multimedia/banner.png") no-repeat center fixed;
   background-size: cover;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 100px 0;
+  padding: 190px 0;
 }
 
 .banner h1{
   display: flex;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 30px;
 }
 
 .banner p{
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
 }
 
 .banner a{
@@ -246,8 +243,7 @@ a:hover{
 
 /* Footer index */
 
-.footer{
-  grid-area: footer;
+.footerIndex{
   color: white;
   background-color: #161515;
   display: flex;
@@ -257,23 +253,23 @@ a:hover{
   padding-bottom: 20px;
 }
 
-.footer h1{
+.footerIndex h1{
   display: flex;
   justify-content: flex-start;
   font-size: 1.5rem;
   margin-bottom: 15px;
   padding-left: 100px;
 }
-.footer p{
+.footerIndex p{
   display: flex;
   justify-content: flex-start;
   padding-left: 100px;
   margin-bottom: 15px;
-  width: 300px;
+  flex-wrap: wrap;
+  
 }
 
-.api{
-  grid-area: api;
+.apiIndex{
   background-color: #161515;
   color: white;
   display: flex;
@@ -282,14 +278,14 @@ a:hover{
   padding-bottom: 20px;
 }
 
-.api h1{
+.apiIndex h1{
   display: flex;
   justify-content: flex-start;
   padding-left: 100px;
   margin-bottom: 15px;
 }
 
-.api ul{
+.apiIndex ul{
   display: flex;
   justify-content: flex-start;
   padding-left: 100px;
@@ -975,6 +971,218 @@ a:hover{
   align-self: center;
   margin: auto;
 }
+
+/* Pagina Equipo */
+
+.logoEquipo{
+  background-color: #222121;
+}
+
+.headerEquipo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #222121;
+}
+
+.headerEquipo li{
+  display: inline-block;
+  font-size: 1.3rem;
+  padding-right: 10px;
+  padding-top: 20px
+}
+
+.tituloEquipo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  background-color: #000000;
+}
+.tituloEquipo h1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 30px;
+  padding-top: 50px;
+}
+
+.tituloEquipo h3{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+}
+
+.juampi{
+  background-color: #000000;
+  padding-bottom: 30px;
+}
+
+.juampi img{
+  display: flex;
+  width: 50%;
+  border-radius: 100px;
+  margin: auto;
+}
+
+.juampi h2{
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.juampi h3{
+  color: gray;
+  text-align: center;
+}
+
+.caro{
+  background-color: #000000;
+  padding-bottom: 30px;
+}
+
+.caro img{
+  display: flex;
+  width: 50%;
+  border-radius: 100px;
+  margin: auto;
+}
+
+.caro h2{
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.caro h3{
+  color: gray;
+  text-align: center;
+}
+
+.nico{
+  background-color: #000000;
+  padding-bottom: 30px;
+}
+
+.nico img{
+  display: flex;
+  width: 50%;
+  border-radius: 100px;
+  margin: auto;
+}
+
+.nico h2{
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.nico h3{
+  color: gray;
+  text-align: center;
+}
+
+
+.nemo{
+  background-color: #000000;
+  padding-bottom: 30px;
+}
+
+.nemo img{
+  display: flex;
+  width: 35%;
+  border-radius: 100px;
+  margin: auto;
+}
+
+.nemo h2{
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.nemo h3{
+  color: gray;
+  text-align: center;
+}
+
+.ema{
+  background-color: #000000;
+  padding-bottom: 30px;
+}
+
+.ema img{
+  display: flex;
+  width: 35%;
+  border-radius: 100px;
+  margin: auto;
+}
+
+.ema h2{
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.ema h3{
+  color: gray;
+  text-align: center;
+}
+
+/* Footer equipo */
+
+.footerEquipo{
+  color: white;
+  background-color: #161515;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footerEquipo h1{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  padding-left: 100px;
+}
+.footerEquipo p{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  
+}
+
+.apiEquipo{
+  background-color: #161515;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.apiEquipo h1{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px;
+  margin-bottom: 15px;
+}
+
+.apiEquipo ul{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px;
+}
+
 
 
 /* Media Queries Pagina Contacto */
