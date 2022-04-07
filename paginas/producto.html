@@ -6,140 +6,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="../estilos/estilos.css"> <!--Insertamos CSS en el HTML-->
 </head>
 <body>
-    <div class="containerProducto">
-        <div class="logoProducto"></div>
-        <header class="headerProducto"> <!-- Navegacion -->
-            <nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="logoProducto col-sm-12 col-md-12 col-lg-6">
+                <img src="#" alt="">
+            </div>
+            <header class="headerProducto col-sm-12 col-md-12 col-lg-6"> <!-- Navegacion -->
+                <nav>
+                    <ul>
+                        <li><a href="../index.html"> Inicio </a> </li>
+                        <li><a href="mercado.html"> Mercado </a> </li>
+                        <li><a href="producto.html"> Producto</a></li>
+                        <li><a href="equipo.html"> Equipo</a></li>
+                        <li><a href="contacto.html"> Contacto</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        
+        <div class="row">
+            <div class="tuRanking col-sm-12 col-md-12 col-lg-6">
+                <h1>Tu Ranking</h1>
                 <ul>
-                    <li><a href="../index.html"> Inicio </a> </li>
-                    <li><a href="mercado.html"> Mercado </a> </li>
-                    <li><a href="producto.html"> Producto</a></li>
-                    <li><a href="equipo.html"> Equipo</a></li>
-                    <li><a href="contacto.html"> Contacto</a></li>
+                    <li>Ranking de peliculas y series para cada usuario</li>
+                    <li>El ranking se calcula en base a la cantidas de vistos por tus seguidos</li>
+                    <li>Visualización de trarilers</li>
+                    <li>Puntuación de tus seguidos</li>
+                    <li>Plataforma de streaming en la que se encuentra</li>
                 </ul>
-            </nav>
-        </header>
-        
-                <div class="imagenTuRanking"> <!-- Ranking -->
-                    <div class="imagenRanking_in">
-                        <img src="../multimedia/Home.png" alt="RankingP">
-                    </div>
-                    <div class="imagenRanking_in">
-                        <img src="../multimedia/Home2.png" alt="RankingS">
-                    </div> 
-                </div>
-                <div class="tuRanking">
-                    <h1>Tu Ranking</h1>
-                    <ul>
-                        <li>Ranking de peliculas y series para cada usuario</li>
-                        <li>El ranking se calcula en base a la cantidas de vistos por tus seguidos</li>
-                        <li>Visualización de trarilers</li>
-                        <li>Puntuación de tus seguidos</li>
-                        <li>Plataforma de streaming en la que se encuentra</li>
-                    </ul>
-                </div>
+            </div>
 
-                <div class="compartir"> <!-- Compartir -->
-                    <h1>Compartir</h1>
-                    <ul>    
-                        <li>Sistema de Recomendación Grupal en tan solo 3 simples pasos:</li>
-                        <li>1. Selecciona los usuarios con quienes vas a compartir la pelicula</li>
-                        <li>2. Aplica los filtros (Plataforma, Género, Duración, Certificación)</li>
-                        <li>3. Mira los trailers sugeridos y dale like a los que te gusten</li>
-                    </ul>
+            <div class="imagenTuRanking col-sm-12 col-md-12 col-lg-6"> <!-- Ranking -->
+                <div class="imagenRanking_in">
+                    <img src="../multimedia/Home.png" alt="RankingP">
                 </div>
+                <div class="imagenRanking_in">
+                    <img src="../multimedia/Home2.png" alt="RankingS">
+                </div> 
+            </div>
+        </div>
 
-                <div class="imagenCompartir">
-                    <div class="imagenCompartir_in">
-                        <img src="../multimedia/Compartir.png" alt="Compartir1">
-                    </div>
-                    <div class="imagenCompartir_in">
-                        <img src="../multimedia/Compartir2.png" alt="Compartir2">
-                    </div>
-                    <div class="imagenCompartir_in">
-                        <img src="../multimedia/Compartir3.png" alt="Compartir3">
-                    </div>
+        <div class="row">
+            <div class="imagenCompartir col-sm-12 col-md-12 col-lg-6">
+                <div class="imagenCompartir_in">
+                    <img src="../multimedia/Compartir.png" alt="Compartir1">
                 </div>
-
-                <div class="imagenPerfil"> <!-- Perfil -->
-                    <div class="imagenPerfil_in">
-                        <img src="../multimedia/Perfil1.png" alt="Perfil1">
-                    </div>
-                    <div class="imagenPerfil_in">
-                        <img src="../multimedia/Perfil2.png" alt="Perfil2">
-                    </div>   
+                <div class="imagenCompartir_in">
+                    <img src="../multimedia/Compartir2.png" alt="Compartir2">
                 </div>
-
-                <div class="perfil">
-                    <h1>Perfil del usuario</h1>
-                    <ul>
-                        <li>Visualiza las peliculas y series vistas por vos y tus amigos</li>
-                        <li>Mantén un registro de las peliculas y series agregadas a tu lista</li>
-                        <li>Enterate de cada pelicula y serie que agregan tus amigos en tiempo real </li>
-                    </ul>
+                <div class="imagenCompartir_in">
+                    <img src="../multimedia/Compartir3.png" alt="Compartir3">
                 </div>
+            </div>
 
-                <div class="buscador"> <!-- Buscador -->
-                    <h1>Buscador</h1>
-                    <ul>
-                        <li>Buscar usuarios</li>
-                        <li>Buscar peliculas y series</li>
-                        <li>Buscar actores y sus peliculas/series</li>
-                    </ul>
+            <div class="compartir col-sm-12 col-md-12 col-lg-6"> <!-- Compartir -->
+                <h1>Compartir</h1>
+                <ul>    
+                    <li>Sistema de Recomendación Grupal en tan solo 3 simples pasos:</li>
+                    <li>1. Selecciona los usuarios con quienes vas a compartir la pelicula</li>
+                    <li>2. Aplica los filtros (Plataforma, Género, Duración, Certificación)</li>
+                    <li>3. Mira los trailers sugeridos y dale like a los que te gusten</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="perfil col-sm-12 col-md-12 col-lg-6">
+                <h1>Perfil del usuario</h1>
+                <ul>
+                    <li>Visualiza las peliculas y series vistas por vos y tus amigos</li>
+                    <li>Mantén un registro de las peliculas y series agregadas a tu lista</li>
+                    <li>Enterate de cada pelicula y serie que agregan tus amigos en tiempo real </li>
+                </ul>
+            </div>
+            <div class="imagenPerfil col-sm-12 col-md-12 col-lg-6"> <!-- Perfil -->
+                <div class="imagenPerfil_in">
+                    <img src="../multimedia/Perfil1.png" alt="Perfil1">
                 </div>
+                <div class="imagenPerfil_in">
+                    <img src="../multimedia/Perfil2.png" alt="Perfil2">
+                </div>   
+            </div>
+        </div>
 
-                <div class="imagenBuscador">
-                    <div class="imagenBuscador_in">
-                        <img src="../multimedia/Buscador1.png" alt="Buscador1">
-                    </div>
-                    <div class="imagenBuscador_in">
-                        <img src="../multimedia/Buscador2.png" alt="Buscador2">
-                    </div>
-                    <div class="imagenBuscador_in">
-                        <img src="../multimedia/Buscador3.png" alt="Buscador3">
-                    </div>
+        <div class="row">
+            <div class="imagenBuscador col-sm-12 col-md-12 col-lg-6">
+                <div class="imagenBuscador_in">
+                    <img src="../multimedia/Buscador1.png" alt="Buscador1">
                 </div>
-
-                <div class="imagenNotificaciones"> <!-- Notificaciones -->
-                    <div class="imagenNotificaciones_in">
-                        <img src="../multimedia/notificaciones1.png" alt="Notificaciones1">
-                    </div>
-                    <div class="imagenNotificaciones_in">
-                        <img src="../multimedia/notificaciones2.png" alt="Notificaciones2"> 
-                    </div>
+                <div class="imagenBuscador_in">
+                    <img src="../multimedia/Buscador2.png" alt="Buscador2">
                 </div>
-
-                <div class="notificaciones">
-                    <h1>Notifiaciones</h1>
-                    <ul>
-                        <li>Recibe invitaciones para compartir una pelicula</li>
-                        <li>Recibe recomendaciones de tus amigos</li>
-                        <li>Enterate cuando una persona agrega contenido a su lista</li>
-                        <li>Enterate de las peliculas que vieron tus amigos</li>
-                    </ul>
+                <div class="imagenBuscador_in">
+                    <img src="../multimedia/Buscador3.png" alt="Buscador3">
                 </div>
+            </div>
+            <div class="buscador col-sm-12 col-md-12 col-lg-6"> <!-- Buscador -->
+                <h1>Buscador</h1>
+                <ul>
+                    <li>Buscar usuarios</li>
+                    <li>Buscar peliculas y series</li>
+                    <li>Buscar actores y sus peliculas/series</li>
+                </ul>
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="notificaciones col-sm-12 col-md-12 col-lg-6">
+                <h1>Notifiaciones</h1>
+                <ul>
+                    <li>Recibe invitaciones para compartir una pelicula</li>
+                    <li>Recibe recomendaciones de tus amigos</li>
+                    <li>Enterate cuando una persona agrega contenido a su lista</li>
+                    <li>Enterate de las peliculas que vieron tus amigos</li>
+                </ul>
+            </div>
+            <div class="imagenNotificaciones col-sm-12 col-md-12 col-lg-6"> <!-- Notificaciones -->
+                <div class="imagenNotificaciones_in">
+                    <img src="../multimedia/notificaciones1.png" alt="Notificaciones1">
+                </div>
+                <div class="imagenNotificaciones_in">
+                    <img src="../multimedia/notificaciones2.png" alt="Notificaciones2"> 
+                </div>
+            </div>
+        </div>
         
 
-    <footer class="footer"> <!-- Footer -->
-        <h1>SOBRE NOSOTROS</h1>
-        <p>Somos un equipo apasionado por las peliculas y series dedicado a ayudarte a elegir la pelicula perfecta para vos </p>
-        <p>Contacto: chokgarianmauro@gmail.com</p>
-    </footer>
-
-    <section class="api">
-            <h1>API</h1>
-            <ul>
-                <li><a href="https://www.themoviedb.org/">TMDB</a></li>
-            </ul>
-    </section>
+        <div class="row">
+            <footer class="footerIndex col-sm-12 col-md-6 col-lg-6"> <!-- Footer -->
+                <h1>SOBRE NOSOTROS</h1>
+                <p>Somos un equipo apasionado por las peliculas y series dedicado a ayudarte a elegir la pelicula perfecta para vos </p>
+                <p>Contacto: chokgarianmauro@gmail.com</p>
+            </footer>
+            <section class="apiIndex col-sm-12 col-md-6 col-lg-6">
+                    <h1>API</h1>
+                    <ul>
+                        <li><a href="https://www.themoviedb.org/documentation/api">TMDB</a></li>
+                    </ul>
+            </section>
+    </div>
 
 </div>
 
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
         
 
 </body>

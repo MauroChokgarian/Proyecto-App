@@ -26,18 +26,6 @@ a:hover{
 }
 
 /* Pagina index */
-/* .container {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.15fr 0.8fr 0.7fr 1fr 0.8fr 0.2fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "logo logo navegacion navegacion"
-    "nombreApp nombreApp imagenProducto imagenProducto"
-    "problema problema imagenProblema imagenProblema"
-    "imagenSolucion imagenSolucion textoSolucion textoSolucion"
-    "banner banner banner banner"
-    "footer footer api api";
-} */
 
 .logoIndex{
   background-color: #222121;
@@ -76,7 +64,7 @@ a:hover{
 .titulo-principal p{
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 50px;
+  padding-bottom: 30px;
   padding-left: 100px;
   padding-right: 30px;
 
@@ -198,18 +186,82 @@ a:hover{
   background-color: #000000;
 }
 
-
-
 .textoSolucion h1{
   font-size: 1.5rem;
   margin-bottom: 20px;
-  
 }
 
+/* Media Queries para pagina Index */
+
+@media screen and (max-width:768px){
+  .titulo-principal h1{
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 0px;
+    justify-content: center;
+  }
+
+  .titulo-principal p{
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+  }
+
+  .titulo-principal a{
+    align-items: center;
+    margin-left: 0px;
+    text-align: center;
+    align-self: center;
+  }
+
+  .textoSolucion h1{
+    text-align: center;
+  }
+  .problema h1{
+    padding-top: 20px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .problema p{
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .problema ul{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .imagenProblema{
+    justify-content: center;
+  }
+  .banner p{
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width:500px){
+
+  .headerIndex li{
+    display: block;
+    text-align: center;
+  }
+
+  .titulo-principal h1{
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .textoSolucion h1{
+    text-align: center;
+  }
+}
 .textoSolucion ul{
   list-style-type: circle;
   line-height: 1.8;
-  
 }
 
 /* Banner */
@@ -700,30 +752,12 @@ a:hover{
 }
 
 
-
-
-.containerProducto {  
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.15fr 0.8fr 0.8fr 1fr 1fr 1fr 0.2fr;
-  gap: 20px 0px;
-  grid-template-areas:
-  "logo logo navegacion navegacion"
-  "textoRanking textoRanking imagenRanking imagenRanking "
-  "imagenCompartir imagenCompartir textoCompartir textoCompartir"
-  "textoPerfil textoPerfil imagenPerfil imagenPerfil"
-  "imagenBuscador imagenBuscador textoBuscador textoBuscador"
-  "textoNotificaciones textoNotificaciones imagenNotificaciones imagenNotificaciones"
-  "footer footer api api";
-}
-
+/* Pagina Producto */
 .logoProducto{
-  grid-area: logo;
   background-color: #222121;
 }
 
 .headerProducto{
-  grid-area: navegacion;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -740,16 +774,18 @@ a:hover{
 /* Tu Ranking */
 
 .tuRanking{
-  grid-area: textoRanking;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: white;
+  background-color: #000000;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 50px;
   
 }
 
 .tuRanking h1{
-  padding-left: 100px;
   font-size: 2rem;
   text-decoration: underline;
   padding-bottom: 20px;
@@ -757,17 +793,18 @@ a:hover{
 }
 
 .tuRanking ul{
-  padding-left: 100px;
   list-style-type: circle;
   line-height: 1.5;
   font-size: 1.5rem;
 }
 
 .imagenTuRanking{
-  grid-area: imagenRanking;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: #000000;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .imagenRanking_in{
@@ -786,10 +823,12 @@ a:hover{
 /* Compartir */
 
 .imagenCompartir{
-  grid-area: imagenCompartir;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: #000000;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
 }
 
@@ -807,16 +846,18 @@ a:hover{
 }
 
 .compartir{
-  grid-area: textoCompartir;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: white;
+  background-color: #000000;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 50px;
   
 }
 
 .compartir h1{
-  padding-left: 30px;
   padding-right: 30px;
   font-size: 2rem;
   text-decoration: underline;
@@ -825,7 +866,6 @@ a:hover{
 }
 
 .compartir ul{
-  padding-left: 30px;
   padding-right: 30px;
   list-style-type: circle;
   line-height: 1.5;
@@ -835,10 +875,12 @@ a:hover{
 /* Perfil */
 
 .imagenPerfil{
-  grid-area: imagenPerfil;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: #000000;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .imagenPerfil_in{
@@ -855,15 +897,17 @@ a:hover{
 }
 
 .perfil{
-  grid-area: textoPerfil;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: white;
+  background-color: #000000;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 50px;
 }
 
 .perfil h1{
-  padding-left: 100px;
   font-size: 2rem;
   text-decoration: underline;
   padding-bottom: 20px;
@@ -871,21 +915,20 @@ a:hover{
 }
 
 .perfil ul{
-  padding-left: 100px;
   list-style-type: circle;
   line-height: 1.5;
   font-size: 1.5rem;
 }
 
-
-
 /* Buscador */
 
 .imagenBuscador{
-  grid-area: imagenBuscador;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: #000000;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .imagenBuscador_in{
@@ -902,16 +945,17 @@ a:hover{
 }
 
 .buscador{
-  grid-area: textoBuscador;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: white;
-  
+  background-color: #000000;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 50px;
 }
 
 .buscador h1{
-  padding-left: 30px;
   padding-right: 30px;
   font-size: 2rem;
   text-decoration: underline;
@@ -920,7 +964,6 @@ a:hover{
 }
 
 .buscador ul{
-  padding-left: 30px;
   padding-right: 30px;
   list-style-type: circle;
   line-height: 1.5;
@@ -930,15 +973,17 @@ a:hover{
 /* Notificaciones */
 
 .notificaciones{
-  grid-area: textoNotificaciones;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: white;
+  background-color: #000000;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 50px;
 }
 
 .notificaciones h1{
-  padding-left: 100px;
   font-size: 2rem;
   text-decoration: underline;
   padding-bottom: 20px;
@@ -946,17 +991,18 @@ a:hover{
 }
 
 .notificaciones ul{
-  padding-left: 100px;
   list-style-type: circle;
   line-height: 1.5;
   font-size: 1.5rem;
 }
 
 .imagenNotificaciones{
-  grid-area: imagenNotificaciones;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: #000000;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .imagenNotificaciones_in{
@@ -970,6 +1016,65 @@ a:hover{
   width: 80%;
   align-self: center;
   margin: auto;
+}
+
+/* Media Queries para pagina producto */
+
+@media screen and (max-width:768px){
+  .tuRanking h1{
+    text-align: center;
+  }
+  .tuRanking ul{
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .compartir h1{
+    text-align: center;
+  }
+  .compartir ul{
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .perfil h1{
+    text-align: center;
+  }
+  .perfil ul{
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .buscador h1{
+    text-align: center;
+  }
+  .buscador ul{
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .notificaciones h1{
+    text-align: center;
+  }
+  .notificaciones ul{
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width:500px){
+  .headerProducto li{
+    display: block;
+    font-size: 1.3rem;
+    padding-right: 10px;
+    padding-top: 20px;
+    text-align: center;
+  }
 }
 
 /* Pagina Equipo */
@@ -1017,6 +1122,7 @@ a:hover{
   padding-bottom: 100px;
 }
 
+/* Primera fila */
 .juampi{
   background-color: #000000;
   padding-bottom: 30px;
@@ -1086,7 +1192,7 @@ a:hover{
   text-align: center;
 }
 
-
+/* Segunda Fila */
 .nemo{
   background-color: #000000;
   padding-bottom: 30px;
@@ -1243,6 +1349,7 @@ a:hover{
   .headerContacto ul{
     display: flex;
     flex-direction: column;
+    text-align: center;
   }
   .contacto{
     grid-area: contacto;
