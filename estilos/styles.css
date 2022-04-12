@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62,5%;
+  /*Cambiamos la etiqueta raiz y ahora se cuenta de 10px en 10px*/
+  font-family: Arial, Helvetica, sans-serif; }
+
+ul {
+  list-style-type: none;
+  /*Sacamos los bullets de las listas*/ }
+
+.logoContacto {
+  background-color: #222121; }
+
+.headerContacto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #222121; }
+  .headerContacto li {
+    display: inline-block;
+    font-size: 1.3rem;
+    padding-right: 10px;
+    padding-top: 20px; }
+    .headerContacto li a {
+      text-decoration: none;
+      /*Sacamos el subrayado en los enlaces*/
+      color: white; }
+      .headerContacto li a:hover {
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 5px;
+        color: red; }
+
+/* Formulario */
+.contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  background-color: #000000; }
+  .contacto h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    font-size: 2rem; }
+  .contacto p {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; }
+  .contacto form {
+    text-align: center; }
+
+.nombre {
+  width: 50%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 10px; }
+
+.correo {
+  width: 50%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 10px; }
+
+.mensaje {
+  width: 50%;
+  height: 200px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 10px; }
+
+.enviar {
+  width: 50%;
+  padding: 8px;
+  margin-bottom: 100px;
+  border-radius: 10px; }
+
+/* Footer Contacto*/
+.footer {
+  color: white;
+  background-color: #161515;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .footer h1 {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    padding-left: 100px;
+    width: 70%; }
+  .footer p {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 100px;
+    margin-bottom: 15px;
+    width: 70%; }
+
+.api {
+  background-color: #161515;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .api h1 {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 100px;
+    margin-bottom: 15px; }
+  .api ul {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 100px;
+    font-size: 1.3rem; }
+    .api ul a {
+      text-decoration: none;
+      /*Sacamos el subrayado en los enlaces*/
+      color: white; }
+      .api ul a:hover {
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 5px;
+        color: red; }
+
+@media screen and (max-width: 500px) {
+  .headerContacto li {
+    display: block;
+    text-align: center; } }
