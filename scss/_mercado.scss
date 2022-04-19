@@ -1,0 +1,290 @@
+/* Pagina Mercado */
+html {
+  font-size: map-get($estilohtml, letra);
+  font-family: map-get($estilohtml, tipoletra);
+}
+body{
+  background-color: black;
+}
+
+.logoMercado{
+    background-color: #222121;
+  }
+  
+  .headerMercado{
+    @include flexbox(flex, row, space-around);
+    background-color: #222121;
+
+    li{
+        display: inline-block;
+        font-size: $tamañoLinks;
+        padding: 20px 10px 0px 0px;
+        a{
+            text-decoration: none; /*Sacamos el subrayado en los enlaces*/
+            color: white;
+        &:hover{
+            border:1px solid white;
+            padding: 10px;
+            border-radius: 5px;
+            color: red;
+            }
+        }
+    }
+}
+  
+  .bannerMercado{
+    background-image:url("../multimedia/mercado.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 50px;
+    h1{
+    display: flex;
+    justify-content: center;
+    font-size: $letraGrande;
+    padding: 50px 0px 30px 0px;
+    text-align: center;
+    }
+  
+    p{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: $parrafo;
+    }
+  
+}
+  
+  /* Encuesta1 */
+  
+  .imagenEncuesta1 {
+    @include flexbox(flex, column, center);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    img{
+    width: 350px;
+  }
+}
+  .conclusion1{
+    color: rgb(143, 143, 143);
+    @include flexbox(flex, column, center);
+    font-size: $parrafo;
+    padding-left: 70px;
+  }
+  
+  /* Encuesta2 */
+  
+  .imagenEncuesta2 {
+    @include flexbox(flex, column, center);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    img{
+    width: 350px;
+  }
+}
+  .conclusion2{
+    color: rgb(143, 143, 143);
+    @include flexbox(flex, column, center);
+    font-size: $parrafo;
+    padding-left: 70px;
+  }
+  
+  /* Encuesta3 */
+  
+  .imagenEncuesta3 {
+    @include flexbox(flex, column, center);
+    padding-bottom: 50px;
+   img{
+    width: 350px;
+  }
+}
+  .conclusion3{
+    color: rgb(143, 143, 143);
+    @include flexbox(flex, column, center);
+    font-size: $parrafo;
+    padding-left: 70px;
+  }
+
+  
+  /* Encuesta4 */
+  
+  .imagenEncuesta4 {
+    @include flexbox(flex, column, center);
+    padding-bottom: 50px;
+  img{
+    width: 350px;
+  }
+}
+  .conclusion4{
+    color: rgb(143, 143, 143);
+    @include flexbox(flex, column, center);
+    font-size: $parrafo;
+    padding-left: 70px;
+  }
+  
+  /* Encuesta5 */
+  
+  .imagenEncuesta5 {
+    @include flexbox(flex, column, center);
+    padding-bottom: 100px;
+
+  img{
+    width: 350px;
+  }
+}
+  .conclusion5{
+    color: rgb(143, 143, 143);
+    @include flexbox(flex, column, center);
+    font-size: $parrafo;
+    padding-left: 70px;
+  }
+  
+  /* Encuesta6 */
+  
+  .imagenEncuesta6 {
+    @include flexbox(flex, column, center);
+    padding-bottom: 100px;
+  img{
+    width: 350px;
+  }
+}
+  .conclusion6{
+    color: rgb(143, 143, 143);
+    @include flexbox(flex, column, center);
+    font-size: $parrafo;
+    padding-left: 70px;
+  }
+  
+  
+  /* Footer*/
+  .footer{
+    color: white;
+    background-color: #161515;
+    @include flexbox(flex, column, center);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    h2{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    padding-left: 100px;
+    font-size: $titulo;
+  }
+    p{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 100px;
+    margin-bottom: 15px;
+    width: 70%;
+    font-size: $parrafo;
+    }
+}
+  
+  .api{
+    background-color: #161515;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  h2{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 100px;
+    margin-bottom: 15px;
+    font-size: $titulo;
+  }
+  
+  ul{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 100px;
+  }
+}
+
+/* Media Queries Pagina Mercado */
+
+@media screen and (max-width:768px){
+
+  .headerMercado ul{
+    @include flexbox(flex, column, center);
+    padding-bottom: 10px;
+  }
+
+  .bannerMercado{
+    padding-bottom: 40px;
+  }
+
+  .bannerMercado p{
+    text-align: center;
+    padding: 0px 20px 0px 20px;
+  }
+
+  .imagenEncuesta1{
+    @include flexbox(flex, row, center);
+    padding-top: 0px;
+    padding-bottom: 10px;
+
+  }
+  .conclusion1{
+    @include flexbox(flex, row, center);
+    padding: 0px 50px 40px 50px;
+    text-align: center;
+  }
+
+  .imagenEncuesta2{
+    @include flexbox(flex, row, center);
+    padding-bottom: 10px;
+  }
+  .conclusion2{
+    @include flexbox(flex, row, center);
+    padding: 0px 50px 40px 50px;
+    text-align: center;
+  }
+
+  .imagenEncuesta3{
+    @include flexbox(flex, row, center);
+    padding-bottom: 10px;
+  }
+  .conclusion3{
+    @include flexbox(flex, row, center);
+    padding: 0px 50px 40px 50px;
+    text-align: center;
+  }
+
+  .imagenEncuesta4{
+    @include flexbox(flex, row, center);
+    padding-bottom: 10px;
+  }
+  .conclusion4{
+    @include flexbox(flex, row, center);
+    padding: 0px 50px 40px 50px;
+    text-align: center;
+  }
+
+  .imagenEncuesta5{
+    @include flexbox(flex, row, center);
+    padding-bottom: 10px;
+  }
+  .conclusion5{
+    @include flexbox(flex, row, center);
+    padding: 0px 50px 40px 50px;
+    text-align: center;
+  }
+
+  .imagenEncuesta6{
+    @include flexbox(flex, row, center);
+    padding-bottom: 10px;
+  }
+  .conclusion6{
+    @include flexbox(flex, row, center);
+    padding: 0px 50px 40px 50px;
+    text-align: center;
+  }
+  
+  }

@@ -1,5 +1,29 @@
-$letraGrande: 2rem;
-$tamañoLinks: 1.3rem;
+$letraGrande: 3rem;
+$tamañoLinks: 1.8rem;
+$parrafo: 1.8rem;
+$titulo: 2.3rem;
 
+$estilohtml: (
+    letra: 62.5%,
+    tipoletra: Arial Helvetica sans-serif,
+);
 
+$estilobulletizq: (
+    bullet: circle,
+    interlineado: 2,
+    tamaño: 1.8rem,
+);
+
+$estilobulletder: (
+    bullet: circle,
+    interlineado: 2,
+    tamaño: 1.8rem,
+    paddingright: 30px,
+);
+
+@mixin flexbox ($flex, $direction, $alineado){
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $alineado;
+}
 

@@ -1,0 +1,199 @@
+/* Pagina Equipo */
+
+.logoEquipo{
+    background-color: #222121;
+  }
+  
+  .headerEquipo{
+    @include flexbox(flex, row, space-around);
+    background-color: #222121;
+  
+    li{
+    display: inline-block;
+    font-size: 1.3rem;
+    padding-right: 10px;
+    padding-top: 20px
+  }
+}
+  
+  .tituloEquipo{
+    @include flexbox(flex, column, center);
+    color: white;
+    background-color: #000000;
+  
+    h1{
+    @include flexbox(flex, row, center);
+    padding-bottom: 30px;
+    padding-top: 50px;
+    font-size: $letraGrande;
+  }
+    p{
+    @include flexbox(flex, row, center);
+    text-align: center;
+    padding: 0px 50px 100px 50px;
+    font-size: $parrafo;
+  }
+}
+  
+  /* Primera fila */
+  .juampi{
+    background-color: #000000;
+    padding-bottom: 30px;
+  
+    img{
+    display: flex;
+    width: 50%;
+    border-radius: 100px;
+    margin: auto;
+  }
+    h2{
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    font-size: $titulo;
+  }
+    p{
+    color: gray;
+    text-align: center;
+    font-size: $parrafo;
+  }
+}
+  
+  .caro{
+    background-color: #000000;
+    padding-bottom: 30px;
+
+    img{
+    display: flex;
+    width: 50%;
+    border-radius: 100px;
+    margin: auto;
+  }
+    h2{
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    font-size: $titulo;
+  }
+    p{
+    color: gray;
+    text-align: center;
+    font-size: $parrafo;
+  }
+}
+  .nico{
+    background-color: #000000;
+    padding-bottom: 30px;
+  
+    img{
+    display: flex;
+    width: 50%;
+    border-radius: 100px;
+    margin: auto;
+  }
+    h2{
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    font-size: $titulo;
+  }
+    p{
+    color: gray;
+    text-align: center;
+    font-size: $parrafo;
+  }
+}
+  
+  /* Segunda Fila */
+  .nemo{
+    background-color: #000000;
+    padding-bottom: 30px;
+  
+    img{
+    display: flex;
+    width: 35%;
+    border-radius: 100px;
+    margin: auto;
+  }
+    h2{
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    font-size: $titulo;
+  }
+    p{
+    color: gray;
+    text-align: center;
+    font-size: $parrafo;
+  }
+}
+  .ema{
+    background-color: #000000;
+    padding-bottom: 30px;
+  
+    img{
+    display: flex;
+    width: 35%;
+    border-radius: 100px;
+    margin: auto;
+  }
+    h2{
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    font-size: $titulo;
+  }
+    p{
+    color: gray;
+    text-align: center;
+    font-size: $parrafo;
+  }
+}
+  
+  /* Footer equipo */
+  
+  .footerEquipo{
+    @include flexbox(flex, column, center);
+    color: white;
+    background-color: #161515;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  
+    h2{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    padding-left: 100px;
+    font-size: $titulo;
+  }
+    p{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 100px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    font-size: $parrafo;
+  }
+}
+  
+  .apiEquipo{
+    background-color: #161515;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  
+    h2{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 100px;
+    margin-bottom: 15px;
+  }
+    ul{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 100px;
+  }
+}

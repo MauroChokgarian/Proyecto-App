@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Moovi, como elegir una película o serie</title>
+    <meta name="keywords" content="peliculas, series, recomendaciones, cine, netflix, hbo, primevideo, streaming" >
+    <meta name="description" content="¿Porque cada vez resulta más difícil elegir una película o serie?
+    ¿Cuáles son las herramientas más utilizadas para la elección de una película/serie?">
+    <!-- Agregamos Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="../estilos/estilos.css"> <!--Insertamos CSS en el HTML-->
+    <link rel="stylesheet" href="../estilos/styles.css"> <!--Insertamos CSS en el HTML-->
     <link
-    rel="stylesheet"
+    rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
-    <div class="containerMercado">
-        <div class="logoMercado"></div>
-        <header class="headerMercado"> <!-- Navegacion -->
+    <div class="container-fluid">
+        <div class="row">
+        <div class="logoMercado col-sm-12 col-md-12 col-lg-6">
+            <img src="#" alt="">
+        </div>
+        <header class="headerMercado col-sm-12 col-md-12 col-lg-6"> <!-- Navegacion -->
             <nav>
                 <ul>
                     <li><a href="../index.html"> Inicio </a> </li>
@@ -26,75 +35,89 @@
                 </ul>
             </nav>
         </header>
-        
-            <main class="bannerMercado"> <!-- Banner -->
+    </div>
+        <div class="row">
+            <main class="bannerMercado col-sm-12 col-md-12 col-lg-12"> <!-- Banner -->
                 <h1>¿Que nos dice el mercado?</h1>
                 <p>Encuestamos a 80 personas para entender que tan dificil les resulta elegir una película o serie cunado no saben que mirar </p>
             </main>
+        </div>
             
+        <div class="row">
             <!-- Encuesta1 -->
-            <section class="imagenEncuesta1">
+            <section class="imagenEncuesta1 col-sm-12 col-md-6 col-lg-3">
                 <img src="../multimedia/encuesta2.png" alt="">
             </section>
 
-            <section class="conclusion1">
+            <section class="conclusion1 col-sm-12 col-md-6 col-lg-3">
                 <p class="animate__animated animate__jackInTheBox">El 73% de los usuarios disfrutan mucho de ver peliculas y series</p>
             </section>
 
             <!-- Encuesta2 -->
-            <section class="imagenEncuesta2">
+            <section class="imagenEncuesta2 col-sm-12 col-md-6 col-lg-3">
                 <img src="../multimedia/encuesta4.png" alt="">
             </section>
 
-            <section class="conclusion2">
+            <section class="conclusion2 col-sm-12 col-md-6 col-lg-3">
                 <p class="animate__animated animate__jackInTheBox">El 80% de los usuarios confirman haber estado alguna vez indecisos sobre que pelicula o serie mirar</p>
             </section>
+        </div>
+        
+        <div class="row">
             <!-- Encuesta3 -->
-            <section class="imagenEncuesta3">
+            <section class="imagenEncuesta3 col-sm-12 col-md-6 col-lg-3">
                 <img src="../multimedia/encuesta5.png" alt="">
             </section>
 
-            <section class="conclusion3">
+            <section class="conclusion3 col-sm-12 col-md-6 col-lg-3">
                 <p class="animate__animated animate__jackInTheBox">El 78% nos dice que no es facil la elección</p>
             </section>
             <!-- Encuesta4 -->
-            <section class="imagenEncuesta4">
+            <section class="imagenEncuesta4 col-sm-12 col-md-6 col-lg-3">
                 <img src="../multimedia/encuesta6.png" alt="">
             </section>
 
-            <section class="conclusion4">
+            <section class="conclusion4 col-sm-12 col-md-6 col-lg-3">
                 <p class="animate__animated animate__jackInTheBox">La opción mas votada es pedir recomendaciónes de conocidos aunque es lo que más tiempo lleva</p>
             </section>
+        </div>
+
+        <div class="row">
             <!-- Encuesta5 -->
-            <section class="imagenEncuesta5">
+            <section class="imagenEncuesta5 col-sm-12 col-md-6 col-lg-3">
                 <img src="../multimedia/encuesta7.png" alt="">
             </section>
 
-            <section class="conclusion5">
+            <section class="conclusion5 col-sm-12 col-md-6 col-lg-3">
                 <p class="animate__animated animate__jackInTheBox">La principal causa por la cual cuesta elegir es por la gran cantidad de oferta de peliculas y series que hay en las plataformas de streaming</p>
             </section>
             <!-- Encuesta6 -->
-            <section class="imagenEncuesta6">
+            <section class="imagenEncuesta6 col-sm-12 col-md-6 col-lg-3">
                 <img src="../multimedia/encuesta8.png" alt="">
             </section>
-
-            <section class="conclusion6">
+            
+            <section class="conclusion6 col-sm-12 col-md-6 col-lg-3">
                 <p class="animate__animated animate__jackInTheBox">El 61% considera que tarde mucho en elegir una película/serie</p>
-            </section>            
+            </section>    
+        </div>        
 
-            <footer class="footer"> <!-- Footer -->
-                <h1>SOBRE NOSOTROS</h1>
+        <div class="row">
+            <footer class="footer col-sm-12 col-md-6 col-lg-6"> <!-- Footer -->
+                <h2>SOBRE NOSOTROS</h2>
                 <p>Somos un equipo apasionado por las peliculas y series dedicado a ayudarte a elegir la pelicula perfecta para vos </p>
                 <p>Contacto: chokgarianmauro@gmail.com</p>
             </footer>
-        
-            <section class="api">
-                    <h1>API</h1>
+            <section class="api col-sm-12 col-md-6 col-lg-6">
+                    <h2>API</h2>
                     <ul>
                         <li><a href="https://www.themoviedb.org/documentation/api">TMDB</a></li>
                     </ul>
             </section>
-
     </div>
 
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
 </body>
+</html>

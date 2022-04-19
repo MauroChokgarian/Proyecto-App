@@ -3,8 +3,8 @@
     padding: 0;
 }
 html{
-    font-size: 62,5%; /*Cambiamos la etiqueta raiz y ahora se cuenta de 10px en 10px*/
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: map-get($estilohtml, letra);
+    font-family: map-get($estilohtml, tipoletra);
 }
 
 ul{
@@ -17,9 +17,7 @@ ul{
 }
 
 .headerContacto{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    @include flexbox(flex, row, space-around);
     background-color: #222121;
 
     li{
@@ -45,9 +43,7 @@ ul{
 /* Formulario */
 
 .contacto{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flexbox(flex, column, center);
     color: white;
     background-color: #000000;
 
@@ -62,7 +58,8 @@ ul{
     p{
         display: flex;
         justify-content: center;
-        margin-bottom: 10px; 
+        margin-bottom: 10px;
+        font-size: $parrafo; 
     }
 
     form{
@@ -107,13 +104,14 @@ ul{
     padding-top: 20px;
     padding-bottom: 20px;
 
-    h1{
+    h2{
         display: flex;
         justify-content: flex-start;
         font-size: 1.5rem;
         margin-bottom: 15px;
         padding-left: 100px;
         width: 70%;
+        font-size: $titulo;
     }
 
     p{
@@ -122,6 +120,8 @@ ul{
         padding-left: 100px;
         margin-bottom: 15px;
         width: 70%;
+        font-size: $parrafo;
+        flex-wrap: wrap;
     }
 
 }
@@ -134,11 +134,12 @@ ul{
     padding-top: 20px;
     padding-bottom: 20px;
 
-    h1{
+    h2{
         display: flex;
         justify-content: flex-start;
         padding-left: 100px;
         margin-bottom: 15px;
+        font-size: $titulo;
     }
 
     ul{

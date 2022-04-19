@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: map-get($estilohtml, letra);
+    font-family: map-get($estilohtml, tipoletra);
+}
+
+ul{
+    list-style-type: none; /*Sacamos los bullets de las listas*/
+}
+
+a{
+    text-decoration: none; /*Sacamos el subrayado en los enlaces*/
+    color: white;
+    font-size: $tamañoLinks;
+&:hover{
+    border:1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    color: red;
+    }
+}
+
+/* Pagina index */
+
+.logoIndex{
+    background-color: #222121;
+  }
+  
+  .headerIndex{
+    @include flexbox(flex, row, space-around);
+    background-color: #222121;
+
+    li{
+        display: inline-block;
+        font-size: $tamañoLinks;
+        padding: 20px 10px 0px 0px;
+    }
+}
+  
+  /* Encabezado */
+  .titulo-principal{
+    @include flexbox(flex, column, center);
+    color: white;
+    background-color: #000000;
+  
+    h1{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+    font-size: $letraGrande;
+    padding-left: 100px;
+  }
+  
+    p{
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 30px;
+    padding-left: 100px;
+    padding-right: 30px;
+    font-size: $parrafo;
+  }
+    a{
+    display: inline-block;
+    width: max-content;
+    margin-left: 100px;
+  }
+}
+  .imagenProducto {
+    @include flexbox(flex, row, center);
+    background-color: #000000;
+    
+  }
+  .imagenProducto_in{
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .imagenProducto_in img{
+    display: flex;
+    width: 60%;
+    align-self: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  
+  .imagenProducto_in img:hover{
+    transform: scale(1.2);
+  }
+  
+  .imagenProducto_in img{
+    transition-duration: 500ms;
+  }
+  
+  /* Problema */
+  .problema{
+    @include flexbox(flex, column, center);
+    color: white;
+    background-color: #161515;
+
+    h2{
+    font-size: $titulo;
+    padding-left: 100px;
+    padding-right: 30px;
+    margin-bottom: 20px;
+  }
+    p{
+    padding-left: 100px;
+    padding-right: 30px;
+    margin-bottom: 30px;
+    font-size: $parrafo;
+  }
+    ul{
+    list-style-type: circle;
+    padding-left: 100px;
+    line-height: 1.8;
+    font-size: $parrafo;
+  }
+}
+  
+  .imagenProblema{
+    display: flex;
+    justify-content: flex-start;
+    background-color: #161515;
+
+    img{
+    width: 99%;
+    border: white solid;
+    border-radius: 10px;  
+  }
+}
+  
+  /* Solucion */
+  .imagenSolucion{
+    @include flexbox(flex, row, center);
+    background-color: #000000;
+  }
+  
+  .imagenSolucion_in{
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    img{
+    display: flex;
+    width: 80%;
+    align-self: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    transition-duration: 500ms;
+    
+  }
+    img:hover{
+    transform: scale(1.5);
+  }
+}
+  
+  .textoSolucion{
+    @include flexbox(flex, column, center);
+    color: white;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: #000000;
+    font-size: $parrafo;
+  
+    h2{
+    font-size: $titulo;
+    margin-bottom: 20px;
+  }
+}
+  
+  /* Banner */
+  
+  .banner{
+    background:url("../multimedia/banner.png") no-repeat center fixed;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 190px 0;
+  
+    h2{
+    display: flex;
+    justify-content: center;
+    font-size: titulo;
+    margin-bottom: 30px;
+  }
+  
+    p{
+    display: flex;
+    justify-content: center;
+    font-size: $parrafo;
+  }
+  
+    a{
+    width: max-content;
+    margin: auto;
+  }
+}
+  
+  /* Footer index */
+  
+  .footerIndex{
+    color: white;
+    background-color: #161515;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  
+    h2{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    padding-left: 100px;
+    font-size: $titulo;
+  }
+    p{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 100px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    font-size: $parrafo;
+    
+  }
+}
+  
+  .apiIndex{
+    background-color: #161515;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  
+    h2{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 100px;
+    margin-bottom: 15px;
+    font-size: $titulo;
+  }
+  
+    ul{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 100px;
+  }
+}
+
+  /* Media Queries para pagina Index */
+  @media screen and (max-width:768px){
+    .titulo-principal h1{
+      text-align: center;
+      padding-top: 20px;
+      padding-left: 0px;
+      justify-content: center;
+    }
+  
+    .titulo-principal p{
+      justify-content: center;
+      padding-left: 20px;
+      padding-right: 20px;
+      text-align: center;
+    }
+  
+    .titulo-principal a{
+      align-items: center;
+      margin-left: 0px;
+      text-align: center;
+      align-self: center;
+    }
+  
+    .textoSolucion h1{
+      text-align: center;
+    }
+    .problema h1{
+      padding-top: 20px;
+      text-align: center;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .problema p{
+      text-align: center;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .problema ul{
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    .imagenProblema{
+      justify-content: center;
+    }
+    .banner p{
+      text-align: center;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  
+  @media screen and (max-width:500px){
+  
+    .headerIndex li{
+      display: block;
+      text-align: center;
+    }
+  
+    .titulo-principal h1{
+      text-align: center;
+      padding-top: 20px;
+    }
+  
+    .textoSolucion h1{
+      text-align: center;
+    }
+  }
+  .textoSolucion ul{
+    list-style-type: circle;
+    line-height: 1.8;
+  }
