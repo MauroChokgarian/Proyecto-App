@@ -22,7 +22,7 @@ ul{
 
     li{
         display: inline-block;
-        font-size: $tamañoLinks;
+        font-size: $Links;
         padding-right: 10px;
         padding-top: 20px;
     
@@ -146,7 +146,7 @@ ul{
         display: flex;
         justify-content: flex-start;
         padding-left: 100px;
-        font-size: $tamañoLinks;
+        font-size: $Links;
         a{
             text-decoration: none; /*Sacamos el subrayado en los enlaces*/
             color: white;
@@ -166,5 +166,19 @@ ul{
     .headerContacto li{
        display: block;
        text-align: center; 
+    }
+
+    .nombre{
+        width: 70%;
+    }
+    .correo{
+        width: 70%;
+    }
+    
+    .mensaje{
+        width: 70%;
+    }
+    .enviar{
+        width: 70%;
     }
 }

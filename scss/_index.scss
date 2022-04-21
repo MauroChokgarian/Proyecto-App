@@ -14,7 +14,7 @@ ul{
 a{
     text-decoration: none; /*Sacamos el subrayado en los enlaces*/
     color: white;
-    font-size: $tamañoLinks;
+    font-size: $Links;
 &:hover{
     border:1px solid white;
     padding: 10px;
@@ -35,7 +35,7 @@ a{
 
     li{
         display: inline-block;
-        font-size: $tamañoLinks;
+        font-size: $Links;
         padding: 20px 10px 0px 0px;
     }
 }
@@ -57,9 +57,7 @@ a{
     p{
     display: flex;
     justify-content: flex-start;
-    padding-bottom: 30px;
-    padding-left: 100px;
-    padding-right: 30px;
+    padding: 0px 30px 30px 100px;
     font-size: $parrafo;
   }
     a{
@@ -106,14 +104,10 @@ a{
 
     h2{
     font-size: $titulo;
-    padding-left: 100px;
-    padding-right: 30px;
-    margin-bottom: 20px;
+    padding: 0px 30px 20px 100px;
   }
     p{
-    padding-left: 100px;
-    padding-right: 30px;
-    margin-bottom: 30px;
+    padding: 0px 30px 30px 100px;
     font-size: $parrafo;
   }
     ul{
@@ -154,8 +148,8 @@ a{
     display: flex;
     width: 80%;
     align-self: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     transition-duration: 500ms;
     
   }
@@ -167,8 +161,7 @@ a{
   .textoSolucion{
     @include flexbox(flex, column, center);
     color: white;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding: 0px 30px 0px 30px;
     background-color: #000000;
     font-size: $parrafo;
   
@@ -181,18 +174,16 @@ a{
   /* Banner */
   
   .banner{
+    @include flexbox(flex, column, center);
     background:url("../multimedia/banner.png") no-repeat center fixed;
     background-size: cover;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 190px 0;
+    padding: 100px 0px 100px 0px;
   
     h2{
     display: flex;
     justify-content: center;
-    font-size: titulo;
+    font-size: $titulo;
     margin-bottom: 30px;
   }
   
@@ -211,21 +202,17 @@ a{
   /* Footer index */
   
   .footerIndex{
+    @include flexbox(flex, column, center);
     color: white;
     background-color: #161515;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding-top: 20px;
     padding-bottom: 20px;
   
     h2{
-    display: flex;
-    justify-content: flex-start;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    padding-left: 100px;
-    font-size: $titulo;
+      @include flexbox(flex, row, flex-start);
+      padding: 0px 0px 15px 100px;
+      font-size: $titulo;
+      width: 70%;
   }
     p{
     display: flex;
@@ -284,14 +271,13 @@ a{
       align-self: center;
     }
   
-    .textoSolucion h1{
+    .textoSolucion h2{
       text-align: center;
     }
-    .problema h1{
-      padding-top: 20px;
+    .problema h2{
       text-align: center;
-      padding-left: 10px;
-      padding-right: 10px;
+      padding: 20px 10px 0px 10px;
+
     }
     .problema p{
       text-align: center;
@@ -299,6 +285,7 @@ a{
       padding-right: 10px;
     }
     .problema ul{
+      padding-top: 10px;
       padding-left: 30px;
       padding-right: 30px;
     }

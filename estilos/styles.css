@@ -136,7 +136,15 @@ ul {
 @media screen and (max-width: 500px) {
   .headerContacto li {
     display: block;
-    text-align: center; } }
+    text-align: center; }
+  .nombre {
+    width: 70%; }
+  .correo {
+    width: 70%; }
+  .mensaje {
+    width: 70%; }
+  .enviar {
+    width: 70%; } }
 
 /* Pagina Producto */
 html {
@@ -372,10 +380,10 @@ html {
   padding: 20px 0px 20px 0px; }
   .footer h2 {
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    padding-left: 100px;
+    padding: 0px 0px 15px 100px;
+    font-size: 2.3rem;
     width: 70%; }
   .footer p {
     display: flex;
@@ -498,6 +506,7 @@ body {
     text-align: center; }
   .bannerMercado p {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     text-align: center;
     margin-bottom: 50px;
@@ -614,14 +623,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 20px;
-  padding-bottom: 20px; }
+  padding: 20px 0px 20px 0px; }
   .footer h2 {
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
-    margin-bottom: 15px;
-    padding-left: 100px;
-    font-size: 2.3rem; }
+    padding: 0px 0px 15px 100px;
+    font-size: 2.3rem;
+    width: 70%; }
   .footer p {
     display: flex;
     justify-content: flex-start;
@@ -654,12 +663,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     padding-bottom: 10px; }
   .bannerMercado {
     padding-bottom: 40px; }
   .bannerMercado p {
     text-align: center;
-    padding: 0px 20px 0px 20px; }
+    padding: 0px 20px 10px 20px; }
   .imagenEncuesta1 {
     display: flex;
     flex-direction: row;
@@ -781,9 +791,7 @@ a {
   .titulo-principal p {
     display: flex;
     justify-content: flex-start;
-    padding-bottom: 30px;
-    padding-left: 100px;
-    padding-right: 30px;
+    padding: 0px 30px 30px 100px;
     font-size: 1.8rem; }
   .titulo-principal a {
     display: inline-block;
@@ -826,13 +834,9 @@ a {
   background-color: #161515; }
   .problema h2 {
     font-size: 2.3rem;
-    padding-left: 100px;
-    padding-right: 30px;
-    margin-bottom: 20px; }
+    padding: 0px 30px 20px 100px; }
   .problema p {
-    padding-left: 100px;
-    padding-right: 30px;
-    margin-bottom: 30px;
+    padding: 0px 30px 30px 100px;
     font-size: 1.8rem; }
   .problema ul {
     list-style-type: circle;
@@ -867,8 +871,8 @@ a {
     display: flex;
     width: 80%;
     align-self: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     transition-duration: 500ms; }
   .imagenSolucion_in img:hover {
     transform: scale(1.5); }
@@ -878,8 +882,7 @@ a {
   flex-direction: column;
   justify-content: center;
   color: white;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding: 0px 30px 0px 30px;
   background-color: #000000;
   font-size: 1.8rem; }
   .textoSolucion h2 {
@@ -888,17 +891,17 @@ a {
 
 /* Banner */
 .banner {
-  background: url("../multimedia/banner.png") no-repeat center fixed;
-  background-size: cover;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 190px 0; }
+  background: url("../multimedia/banner.png") no-repeat center fixed;
+  background-size: cover;
+  color: white;
+  padding: 100px 0px 100px 0px; }
   .banner h2 {
     display: flex;
     justify-content: center;
-    font-size: titulo;
+    font-size: 2.3rem;
     margin-bottom: 30px; }
   .banner p {
     display: flex;
@@ -910,20 +913,20 @@ a {
 
 /* Footer index */
 .footerIndex {
-  color: white;
-  background-color: #161515;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: white;
+  background-color: #161515;
   padding-top: 20px;
   padding-bottom: 20px; }
   .footerIndex h2 {
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    padding-left: 100px;
-    font-size: 2.3rem; }
+    padding: 0px 0px 15px 100px;
+    font-size: 2.3rem;
+    width: 70%; }
   .footerIndex p {
     display: flex;
     justify-content: flex-start;
@@ -967,18 +970,17 @@ a {
     margin-left: 0px;
     text-align: center;
     align-self: center; }
-  .textoSolucion h1 {
+  .textoSolucion h2 {
     text-align: center; }
-  .problema h1 {
-    padding-top: 20px;
+  .problema h2 {
     text-align: center;
-    padding-left: 10px;
-    padding-right: 10px; }
+    padding: 20px 10px 0px 10px; }
   .problema p {
     text-align: center;
     padding-left: 10px;
     padding-right: 10px; }
   .problema ul {
+    padding-top: 10px;
     padding-left: 30px;
     padding-right: 30px; }
   .imagenProblema {
@@ -1013,7 +1015,7 @@ a {
   background-color: #222121; }
   .headerEquipo li {
     display: inline-block;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     padding-right: 10px;
     padding-top: 20px; }
 
@@ -1141,11 +1143,11 @@ a {
   padding-bottom: 20px; }
   .footerEquipo h2 {
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    padding-left: 100px;
-    font-size: 2.3rem; }
+    padding: 0px 0px 15px 100px;
+    font-size: 2.3rem;
+    width: 70%; }
   .footerEquipo p {
     display: flex;
     justify-content: flex-start;
@@ -1170,3 +1172,11 @@ a {
     display: flex;
     justify-content: flex-start;
     padding-left: 100px; }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .headerEquipo ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; } }

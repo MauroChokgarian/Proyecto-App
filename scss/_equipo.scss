@@ -10,7 +10,7 @@
   
     li{
     display: inline-block;
-    font-size: 1.3rem;
+    font-size: $Links;
     padding-right: 10px;
     padding-top: 20px
   }
@@ -160,12 +160,10 @@
     padding-bottom: 20px;
   
     h2{
-    display: flex;
-    justify-content: flex-start;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    padding-left: 100px;
-    font-size: $titulo;
+      @include flexbox(flex, row, flex-start);
+      padding: 0px 0px 15px 100px;
+      font-size: $titulo;
+      width: 70%;
   }
     p{
     display: flex;
@@ -196,4 +194,13 @@
     justify-content: flex-start;
     padding-left: 100px;
   }
+}
+
+/* Media Queries */
+
+@media screen and (max-width:768px){
+  .headerEquipo ul{
+  @include flexbox(flex, column, center);
+  text-align: center;
+}
 }

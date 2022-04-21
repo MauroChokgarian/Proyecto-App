@@ -7,6 +7,7 @@ html{
 
 .logoProducto{
     background-color: #222121;
+
 }
 
 .headerProducto{
@@ -15,7 +16,7 @@ html{
 
     li{
         display: inline-block;
-        font-size: $tamañoLinks;
+        font-size: $Links;
         padding: 20px 10px 0px 0px;
         a{
             text-decoration: none; /*Sacamos el subrayado en los enlaces*/
@@ -272,12 +273,10 @@ html{
     padding: 20px 0px 20px 0px;
 
     h2{
-        display: flex;
-        justify-content: flex-start;
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-        padding-left: 100px;
-        width: 70%;
+      @include flexbox(flex, row, flex-start);
+      padding: 0px 0px 15px 100px;
+      font-size: $titulo;
+      width: 70%;
     }
 
     p{
@@ -308,7 +307,7 @@ html{
         display: flex;
         justify-content: flex-start;
         padding-left: 100px;
-        font-size: $tamañoLinks;
+        font-size: $Links;
         a{
             text-decoration: none; /*Sacamos el subrayado en los enlaces*/
             color: white;
