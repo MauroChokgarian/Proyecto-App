@@ -11,16 +11,18 @@ ul {
   /*Sacamos los bullets de las listas*/ }
 
 .logoContacto {
-  background-color: #222121; }
+  background-color: #222121;
+  padding: 10px; }
 
 .headerContacto {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #222121; }
+  background-color: #222121;
+  align-items: center; }
   .headerContacto li {
     display: inline-block;
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding-right: 10px;
     padding-top: 20px; }
     .headerContacto li a {
@@ -93,13 +95,13 @@ ul {
     justify-content: flex-start;
     font-size: 1.5rem;
     margin-bottom: 15px;
-    padding-left: 100px;
+    padding-left: 20px;
     width: 70%;
     font-size: 2.3rem; }
   .footer p {
     display: flex;
     justify-content: flex-start;
-    padding-left: 100px;
+    padding-left: 20px;
     margin-bottom: 15px;
     width: 70%;
     font-size: 1.8rem;
@@ -122,7 +124,7 @@ ul {
     display: flex;
     justify-content: flex-start;
     padding-left: 100px;
-    font-size: 1.8rem; }
+    font-size: 2rem; }
     .api ul a {
       text-decoration: none;
       /*Sacamos el subrayado en los enlaces*/
@@ -132,6 +134,12 @@ ul {
         padding: 10px;
         border-radius: 5px;
         color: red; }
+
+@media screen and (max-width: 768px) {
+  .api h2 {
+    padding-left: 20px; }
+  .api ul {
+    padding-left: 20px; } }
 
 @media screen and (max-width: 500px) {
   .headerContacto li {
@@ -152,16 +160,18 @@ html {
   font-family: Arial Helvetica sans-serif; }
 
 .logoProducto {
-  background-color: #222121; }
+  background-color: #222121;
+  padding: 10px; }
 
 .headerProducto {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #222121; }
+  background-color: #222121;
+  align-items: center; }
   .headerProducto li {
     display: inline-block;
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding: 20px 10px 0px 0px; }
     .headerProducto li a {
       text-decoration: none;
@@ -382,13 +392,13 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding: 0px 0px 15px 100px;
+    padding: 0px 0px 15px 20px;
     font-size: 2.3rem;
     width: 70%; }
   .footer p {
     display: flex;
     justify-content: flex-start;
-    padding-left: 100px;
+    padding-left: 20px;
     margin-bottom: 15px;
     width: 70%; }
 
@@ -407,7 +417,7 @@ html {
     display: flex;
     justify-content: flex-start;
     padding-left: 100px;
-    font-size: 1.8rem; }
+    font-size: 2rem; }
     .api ul a {
       text-decoration: none;
       /*Sacamos el subrayado en los enlaces*/
@@ -419,6 +429,21 @@ html {
         color: red; }
 
 /* Media Queries para pagina producto */
+@media screen and (max-width: 985px) {
+  .reverse-flex {
+    display: flex;
+    flex-direction: column-reverse; }
+  .tuRanking {
+    align-items: center; }
+  .compartir {
+    align-items: center; }
+  .perfil {
+    align-items: center; }
+  .buscador {
+    align-items: center; }
+  .notificaciones {
+    align-items: center; } }
+
 @media screen and (max-width: 768px) {
   .tuRanking h2 {
     text-align: center; }
@@ -449,7 +474,11 @@ html {
   .notificaciones ul {
     justify-content: center;
     padding-left: 20px;
-    padding-right: 20px; } }
+    padding-right: 20px; }
+  .api h2 {
+    padding-left: 20px; }
+  .api ul {
+    padding-left: 20px; } }
 
 @media screen and (max-width: 500px) {
   .headerProducto li {
@@ -468,16 +497,18 @@ body {
   background-color: black; }
 
 .logoMercado {
-  background-color: #222121; }
+  background-color: #222121;
+  padding: 10px; }
 
 .headerMercado {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #222121; }
+  background-color: #222121;
+  align-items: center; }
   .headerMercado li {
     display: inline-block;
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding: 20px 10px 0px 0px; }
     .headerMercado li a {
       text-decoration: none;
@@ -628,13 +659,13 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding: 0px 0px 15px 100px;
+    padding: 0px 0px 15px 20px;
     font-size: 2.3rem;
     width: 70%; }
   .footer p {
     display: flex;
     justify-content: flex-start;
-    padding-left: 100px;
+    padding-left: 20px;
     margin-bottom: 15px;
     width: 70%;
     font-size: 1.8rem; }
@@ -736,7 +767,11 @@ body {
     flex-direction: row;
     justify-content: center;
     padding: 0px 50px 40px 50px;
-    text-align: center; } }
+    text-align: center; }
+  .api h2 {
+    padding-left: 20px; }
+  .api ul {
+    padding-left: 20px; } }
 
 * {
   margin: 0;
@@ -754,7 +789,7 @@ a {
   text-decoration: none;
   /*Sacamos el subrayado en los enlaces*/
   color: white;
-  font-size: 1.8rem; }
+  font-size: 2rem; }
   a:hover {
     border: 1px solid white;
     padding: 10px;
@@ -762,17 +797,22 @@ a {
     color: red; }
 
 /* Pagina index */
+.navbar {
+  display: none; }
+
 .logoIndex {
-  background-color: #222121; }
+  background-color: #222121;
+  padding: 10px; }
 
 .headerIndex {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #222121; }
+  background-color: #222121;
+  align-items: center; }
   .headerIndex li {
     display: inline-block;
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding: 20px 10px 0px 0px; }
 
 /* Encabezado */
@@ -924,13 +964,13 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding: 0px 0px 15px 100px;
+    padding: 0px 0px 15px 20px;
     font-size: 2.3rem;
     width: 70%; }
   .footerIndex p {
     display: flex;
     justify-content: flex-start;
-    padding-left: 100px;
+    padding-left: 20px;
     margin-bottom: 15px;
     flex-wrap: wrap;
     font-size: 1.8rem; }
@@ -954,6 +994,12 @@ a {
     padding-left: 100px; }
 
 /* Media Queries para pagina Index */
+@media screen and (max-width: 991px) {
+  .logoIndex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; } }
+
 @media screen and (max-width: 768px) {
   .titulo-principal h1 {
     text-align: center;
@@ -988,9 +1034,27 @@ a {
   .banner p {
     text-align: center;
     padding-left: 20px;
-    padding-right: 20px; } }
+    padding-right: 20px; }
+  .apiIndex h2 {
+    padding-left: 20px; }
+  .apiIndex ul {
+    padding-left: 20px; } }
 
 @media screen and (max-width: 500px) {
+  .navbar {
+    display: flex;
+    background-color: #222121; }
+  .navbar-toggler {
+    border-color: white;
+    background-image: white; }
+  .navbar-toggler-icon {
+    color: white !important; }
+  .navbar-nav a {
+    color: white; }
+  .navbar-nav li {
+    text-align: center; }
+  .headerIndex ul {
+    display: none; }
   .headerIndex li {
     display: block;
     text-align: center; }
@@ -998,24 +1062,25 @@ a {
     text-align: center;
     padding-top: 20px; }
   .textoSolucion h1 {
-    text-align: center; } }
-
-.textoSolucion ul {
-  list-style-type: circle;
-  line-height: 1.8; }
+    text-align: center; }
+  .textoSolucion ul {
+    list-style-type: circle;
+    line-height: 1.8; } }
 
 /* Pagina Equipo */
 .logoEquipo {
-  background-color: #222121; }
+  background-color: #222121;
+  padding: 10px; }
 
 .headerEquipo {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #222121; }
+  background-color: #222121;
+  align-items: center; }
   .headerEquipo li {
     display: inline-block;
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding-right: 10px;
     padding-top: 20px; }
 
@@ -1145,13 +1210,13 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding: 0px 0px 15px 100px;
+    padding: 0px 0px 15px 20px;
     font-size: 2.3rem;
     width: 70%; }
   .footerEquipo p {
     display: flex;
     justify-content: flex-start;
-    padding-left: 100px;
+    padding-left: 20px;
     margin-bottom: 15px;
     flex-wrap: wrap;
     font-size: 1.8rem; }
@@ -1167,11 +1232,13 @@ a {
     display: flex;
     justify-content: flex-start;
     padding-left: 100px;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    font-size: 2.3rem; }
   .apiEquipo ul {
     display: flex;
     justify-content: flex-start;
-    padding-left: 100px; }
+    padding-left: 100px;
+    font-size: 1.8rem; }
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
@@ -1179,4 +1246,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center; } }
+    text-align: center; }
+  .apiEquipo h2 {
+    padding-left: 20px; }
+  .apiEquipo ul {
+    padding-left: 20px; } }

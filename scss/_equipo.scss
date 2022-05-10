@@ -2,11 +2,13 @@
 
 .logoEquipo{
     background-color: #222121;
+    padding: 10px;
   }
   
   .headerEquipo{
     @include flexbox(flex, row, space-around);
     background-color: #222121;
+    align-items: center;
   
     li{
     display: inline-block;
@@ -161,14 +163,14 @@
   
     h2{
       @include flexbox(flex, row, flex-start);
-      padding: 0px 0px 15px 100px;
+      padding: 0px 0px 15px 20px;
       font-size: $titulo;
       width: 70%;
   }
     p{
     display: flex;
     justify-content: flex-start;
-    padding-left: 100px;
+    padding-left: 20px;
     margin-bottom: 15px;
     flex-wrap: wrap;
     font-size: $parrafo;
@@ -188,11 +190,13 @@
     justify-content: flex-start;
     padding-left: 100px;
     margin-bottom: 15px;
+    font-size: $titulo;
   }
     ul{
     display: flex;
     justify-content: flex-start;
     padding-left: 100px;
+    font-size: $parrafo;
   }
 }
 
@@ -203,4 +207,12 @@
   @include flexbox(flex, column, center);
   text-align: center;
 }
+  .apiEquipo{
+    h2{
+    padding-left: 20px;
+  }
+    ul{
+    padding-left: 20px;
+  }
+  } 
 }

@@ -8,12 +8,14 @@ body{
 }
 
 .logoMercado{
-    background-color: #222121;
+  background-color: #222121;
+  padding: 10px
   }
   
   .headerMercado{
     @include flexbox(flex, row, space-around);
     background-color: #222121;
+    align-items: center;
 
     li{
         display: inline-block;
@@ -166,14 +168,14 @@ body{
 
     h2{
     @include flexbox(flex, row, flex-start);
-    padding: 0px 0px 15px 100px;
+    padding: 0px 0px 15px 20px;
     font-size: $titulo;
     width: 70%;
   }
     p{
     display: flex;
     justify-content: flex-start;
-    padding-left: 100px;
+    padding-left: 20px;
     margin-bottom: 15px;
     width: 70%;
     font-size: $parrafo;
@@ -282,5 +284,13 @@ body{
     padding: 0px 50px 40px 50px;
     text-align: center;
   }
+  .api{
+    h2{
+    padding-left: 20px;
+  }
+    ul{
+    padding-left: 20px;
+  }
+  } 
   
   }

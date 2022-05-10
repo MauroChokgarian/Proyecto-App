@@ -7,12 +7,14 @@ html{
 
 .logoProducto{
     background-color: #222121;
+    padding: 10px
 
 }
 
 .headerProducto{
     @include flexbox(flex, row, space-around);
     background-color: #222121;
+    align-items: center;
 
     li{
         display: inline-block;
@@ -126,6 +128,7 @@ html{
     padding-right: map-get($estilobulletder, paddingright);
 }
 }
+
 
   /* Perfil */
 
@@ -274,7 +277,7 @@ html{
 
     h2{
       @include flexbox(flex, row, flex-start);
-      padding: 0px 0px 15px 100px;
+      padding: 0px 0px 15px 20px;
       font-size: $titulo;
       width: 70%;
     }
@@ -282,7 +285,7 @@ html{
     p{
         display: flex;
         justify-content: flex-start;
-        padding-left: 100px;
+        padding-left: 20px;
         margin-bottom: 15px;
         width: 70%;
     }
@@ -322,6 +325,28 @@ html{
 }
 
   /* Media Queries para pagina producto */
+  @media screen and (max-width:985px){
+  .reverse-flex{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .tuRanking{
+    align-items: center;
+  }
+  .compartir{
+    align-items: center;
+  }
+  .perfil{
+    align-items: center;
+  }
+  .buscador{
+    align-items: center;
+  }
+  .notificaciones{
+    align-items: center;
+  }
+}
 
 @media screen and (max-width:768px){
     .tuRanking h2{
@@ -365,6 +390,14 @@ html{
       padding-left: 20px;
       padding-right: 20px;
     }
+    .api{
+      h2{
+      padding-left: 20px;
+    }
+      ul{
+      padding-left: 20px;
+    }
+    } 
 }
 @media screen and (max-width:500px){
     .headerProducto li{
@@ -374,4 +407,5 @@ html{
       padding-top: 20px;
       text-align: center;
     }
+
 }
