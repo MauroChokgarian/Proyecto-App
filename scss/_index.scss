@@ -24,16 +24,16 @@ a{
 }
 
 /* Pagina index */
-
 .navbar{
   display: none;
 }
 
 .logoIndex{
   background-color: #222121;
-    padding: 10px
+  padding: 10px
   }
   
+
   .headerIndex{
     @include flexbox(flex, row, space-around);
     background-color: #222121;
@@ -175,21 +175,24 @@ a{
     font-size: $titulo;
     margin-bottom: 20px;
   }
+    ul{
+      list-style-type: circle;
+      line-height: 2;
+    }
 }
   
   /* Banner */
-  
   .banner{
     @include flexbox(flex, column, center);
     background:url("../multimedia/banner.png") no-repeat center fixed;
     background-size: cover;
     color: white;
-    padding: 100px 0px 100px 0px;
+    padding: 250px 0px 250px 0px;
   
     h2{
     display: flex;
     justify-content: center;
-    font-size: $titulo;
+    font-size: $letraGrande;
     margin-bottom: 30px;
   }
   
@@ -319,50 +322,56 @@ a{
     } 
   }
   
-  @media screen and (max-width:500px){
-    .navbar{
-      display: flex;
-      background-color: #222121;
-    }
 
-    .navbar-toggler{
-      border-color: white;
-      background-image: white;
-    }
-
-    .navbar-toggler-icon{
-      color: white !important;
-    }
-
-
-    .navbar-nav a{
-      color: white;
-    }
-
-    .navbar-nav li{
-      text-align: center;
-    }
-
-    .headerIndex ul{
-      display: none;
-    }
-
-    .headerIndex li{
-      display: block;
-      text-align: center;
-    }
-  
-    .titulo-principal h1{
-      text-align: center;
-      padding-top: 20px;
-    }
-  
-    .textoSolucion h1{
-      text-align: center;
-    }
-  
-  .textoSolucion ul{
-    list-style-type: circle;
-    line-height: 1.8;
+@media screen and (max-width:575px){
+  .navbar{
+    display: flex;
+    background-color: #222121;
   }
+
+  .navbar-toggler{
+    border-color: white;
+  }
+
+  .navbar-toggler-icon{
+    color: white !important;
+  }
+
+  .navbar-nav a{
+    color: white;
+  }
+
+  .navbar-nav li{
+    text-align: center;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 114px;
+    right: 0;
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    background-color: #222121;
+    width: 100vw;
+  }
+
+  .headerIndex ul{
+    display: none;
+  }
+
+  .titulo-principal h1{
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .textoSolucion h1{
+    text-align: center;
+  }
+
+.textoSolucion ul{
+  list-style-type: circle;
+  line-height: 1.8;
+}
+
 }

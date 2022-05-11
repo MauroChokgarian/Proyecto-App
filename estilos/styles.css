@@ -14,6 +14,9 @@ ul {
   background-color: #222121;
   padding: 10px; }
 
+.navbar {
+  display: none; }
+
 .headerContacto {
   display: flex;
   flex-direction: row;
@@ -135,16 +138,42 @@ ul {
         border-radius: 5px;
         color: red; }
 
+/* Media Queries para pagina producto */
+@media screen and (max-width: 991px) {
+  .logoContacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; } }
+
 @media screen and (max-width: 768px) {
   .api h2 {
     padding-left: 20px; }
   .api ul {
     padding-left: 20px; } }
 
-@media screen and (max-width: 500px) {
-  .headerContacto li {
-    display: block;
+@media screen and (max-width: 575px) {
+  .navbar {
+    display: flex;
+    background-color: #222121; }
+  .navbar-toggler {
+    border-color: white; }
+  .navbar-toggler-icon {
+    color: white !important; }
+  .navbar-nav a {
+    color: white; }
+  .navbar-nav li {
     text-align: center; }
+  .navbar-collapse {
+    position: absolute;
+    top: 114px;
+    right: 0;
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    background-color: #222121;
+    width: 100vw; }
+  .headerContacto ul {
+    display: none; }
   .nombre {
     width: 70%; }
   .correo {
@@ -162,6 +191,9 @@ html {
 .logoProducto {
   background-color: #222121;
   padding: 10px; }
+
+.navbar {
+  display: none; }
 
 .headerProducto {
   display: flex;
@@ -206,7 +238,7 @@ html {
   flex-direction: row;
   justify-content: center;
   background-color: #000000;
-  padding: 40px 0px 20px 0px; }
+  padding: 60px 0px 20px 0px; }
 
 .imagenRanking_in, .imagenPerfil_in, .imagenNotificaciones_in {
   width: 100%;
@@ -215,7 +247,7 @@ html {
   padding: 10px; }
   .imagenRanking_in img, .imagenPerfil_in img, .imagenNotificaciones_in img {
     display: flex;
-    width: 80%;
+    width: 70%;
     align-self: center;
     margin: auto; }
 
@@ -429,6 +461,12 @@ html {
         color: red; }
 
 /* Media Queries para pagina producto */
+@media screen and (max-width: 991px) {
+  .logoProducto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; } }
+
 @media screen and (max-width: 985px) {
   .reverse-flex {
     display: flex;
@@ -480,13 +518,29 @@ html {
   .api ul {
     padding-left: 20px; } }
 
-@media screen and (max-width: 500px) {
-  .headerProducto li {
-    display: block;
-    font-size: 1.3rem;
-    padding-right: 10px;
-    padding-top: 20px;
-    text-align: center; } }
+@media screen and (max-width: 575px) {
+  .navbar {
+    display: flex;
+    background-color: #222121; }
+  .navbar-toggler {
+    border-color: white; }
+  .navbar-toggler-icon {
+    color: white !important; }
+  .navbar-nav a {
+    color: white; }
+  .navbar-nav li {
+    text-align: center; }
+  .navbar-collapse {
+    position: absolute;
+    top: 114px;
+    right: 0;
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    background-color: #222121;
+    width: 100vw; }
+  .headerProducto ul {
+    display: none; } }
 
 /* Pagina Mercado */
 html {
@@ -495,6 +549,9 @@ html {
 
 body {
   background-color: black; }
+
+.navbar {
+  display: none; }
 
 .logoMercado {
   background-color: #222121;
@@ -528,7 +585,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 50px; }
+  padding-bottom: 150px;
+  padding-top: 150px; }
   .bannerMercado h1 {
     display: flex;
     justify-content: center;
@@ -540,8 +598,8 @@ body {
     flex-direction: row;
     justify-content: center;
     text-align: center;
-    margin-bottom: 50px;
-    font-size: 1.8rem; }
+    /* margin-bottom: 50px; */
+    font-size: 2.3rem; }
 
 /* Encuesta1 */
 .imagenEncuesta1 {
@@ -689,13 +747,13 @@ body {
     padding-left: 100px; }
 
 /* Media Queries Pagina Mercado */
-@media screen and (max-width: 768px) {
-  .headerMercado ul {
+@media screen and (max-width: 991px) {
+  .logoMercado {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding-bottom: 10px; }
+    flex-direction: row;
+    justify-content: center; } }
+
+@media screen and (max-width: 768px) {
   .bannerMercado {
     padding-bottom: 40px; }
   .bannerMercado p {
@@ -772,6 +830,30 @@ body {
     padding-left: 20px; }
   .api ul {
     padding-left: 20px; } }
+
+@media screen and (max-width: 575px) {
+  .navbar {
+    display: flex;
+    background-color: #222121; }
+  .navbar-toggler {
+    border-color: white; }
+  .navbar-toggler-icon {
+    color: white !important; }
+  .navbar-nav a {
+    color: white; }
+  .navbar-nav li {
+    text-align: center; }
+  .navbar-collapse {
+    position: absolute;
+    top: 114px;
+    right: 0;
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    background-color: #222121;
+    width: 100vw; }
+  .headerMercado ul {
+    display: none; } }
 
 * {
   margin: 0;
@@ -928,6 +1010,9 @@ a {
   .textoSolucion h2 {
     font-size: 2.3rem;
     margin-bottom: 20px; }
+  .textoSolucion ul {
+    list-style-type: circle;
+    line-height: 2; }
 
 /* Banner */
 .banner {
@@ -937,11 +1022,11 @@ a {
   background: url("../multimedia/banner.png") no-repeat center fixed;
   background-size: cover;
   color: white;
-  padding: 100px 0px 100px 0px; }
+  padding: 250px 0px 250px 0px; }
   .banner h2 {
     display: flex;
     justify-content: center;
-    font-size: 2.3rem;
+    font-size: 3rem;
     margin-bottom: 30px; }
   .banner p {
     display: flex;
@@ -1040,24 +1125,29 @@ a {
   .apiIndex ul {
     padding-left: 20px; } }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 575px) {
   .navbar {
     display: flex;
     background-color: #222121; }
   .navbar-toggler {
-    border-color: white;
-    background-image: white; }
+    border-color: white; }
   .navbar-toggler-icon {
     color: white !important; }
   .navbar-nav a {
     color: white; }
   .navbar-nav li {
     text-align: center; }
+  .navbar-collapse {
+    position: absolute;
+    top: 114px;
+    right: 0;
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    background-color: #222121;
+    width: 100vw; }
   .headerIndex ul {
     display: none; }
-  .headerIndex li {
-    display: block;
-    text-align: center; }
   .titulo-principal h1 {
     text-align: center;
     padding-top: 20px; }
@@ -1071,6 +1161,9 @@ a {
 .logoEquipo {
   background-color: #222121;
   padding: 10px; }
+
+.navbar {
+  display: none; }
 
 .headerEquipo {
   display: flex;
@@ -1241,13 +1334,39 @@ a {
     font-size: 1.8rem; }
 
 /* Media Queries */
-@media screen and (max-width: 768px) {
-  .headerEquipo ul {
+/* Media Queries para pagina producto */
+@media screen and (max-width: 991px) {
+  .logoEquipo {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center; }
+    flex-direction: row;
+    justify-content: center; } }
+
+@media screen and (max-width: 768px) {
   .apiEquipo h2 {
     padding-left: 20px; }
   .apiEquipo ul {
     padding-left: 20px; } }
+
+@media screen and (max-width: 575px) {
+  .navbar {
+    display: flex;
+    background-color: #222121; }
+  .navbar-toggler {
+    border-color: white; }
+  .navbar-toggler-icon {
+    color: white !important; }
+  .navbar-nav a {
+    color: white; }
+  .navbar-nav li {
+    text-align: center; }
+  .navbar-collapse {
+    position: absolute;
+    top: 114px;
+    right: 0;
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    background-color: #222121;
+    width: 100vw; }
+  .headerEquipo ul {
+    display: none; } }

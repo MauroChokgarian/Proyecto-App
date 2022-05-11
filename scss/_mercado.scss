@@ -7,6 +7,10 @@ body{
   background-color: black;
 }
 
+.navbar{
+  display: none;
+}
+
 .logoMercado{
   background-color: #222121;
   padding: 10px
@@ -40,7 +44,8 @@ body{
     background-size: 100%;
     color: white;
     @include flexbox(flex, column, center);
-    padding-bottom: 50px;
+    padding-bottom: 150px;
+    padding-top: 150px;
     h1{
     display: flex;
     justify-content: center;
@@ -52,8 +57,8 @@ body{
     p{
     @include flexbox(flex, row, center);
     text-align: center;
-    margin-bottom: 50px;
-    font-size: $parrafo;
+    /* margin-bottom: 50px; */
+    font-size: $titulo;
     }
   
 }
@@ -206,13 +211,13 @@ body{
 
 /* Media Queries Pagina Mercado */
 
-@media screen and (max-width:768px){
-
-  .headerMercado ul{
-    @include flexbox(flex, column, center);
-    text-align: center;
-    padding-bottom: 10px;
+@media screen and (max-width:991px){
+  .logoMercado{
+    @include flexbox(flex, row, center);
   }
+}
+
+@media screen and (max-width:768px){
 
   .bannerMercado{
     padding-bottom: 40px;
@@ -293,4 +298,42 @@ body{
   }
   } 
   
+  }
+
+  @media screen and (max-width:575px){
+    .navbar{
+      display: flex;
+      background-color: #222121;
+    }
+  
+    .navbar-toggler{
+      border-color: white;
+    }
+  
+    .navbar-toggler-icon{
+      color: white !important;
+    }
+  
+    .navbar-nav a{
+      color: white;
+    }
+  
+    .navbar-nav li{
+      text-align: center;
+    }
+  
+    .navbar-collapse {
+      position: absolute;
+      top: 114px;
+      right: 0;
+      flex-basis: 100%;
+      flex-grow: 1;
+      align-items: center;
+      background-color: #222121;
+      width: 100vw;
+    }
+  
+    .headerMercado ul{
+      display: none;
+    }
   }

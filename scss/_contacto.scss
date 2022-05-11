@@ -17,6 +17,10 @@ ul{
     padding: 10px;
 }
 
+.navbar{
+    display: none;
+  }
+
 .headerContacto{
     @include flexbox(flex, row, space-around);
     background-color: #222121;
@@ -163,6 +167,12 @@ ul{
     }
 
 }
+/* Media Queries para pagina producto */
+@media screen and (max-width:991px){
+    .logoContacto{
+      @include flexbox(flex, row, center);
+    }
+  }
 
 @media screen and (max-width:768px){
     .api{
@@ -175,11 +185,42 @@ ul{
       } 
 }
 
-@media screen and (max-width:500px){
-    .headerContacto li{
-       display: block;
-       text-align: center; 
-    }
+@media screen and (max-width:575px){
+    .navbar{
+        display: flex;
+        background-color: #222121;
+      }
+    
+      .navbar-toggler{
+        border-color: white;
+      }
+    
+      .navbar-toggler-icon{
+        color: white !important;
+      }
+    
+      .navbar-nav a{
+        color: white;
+      }
+    
+      .navbar-nav li{
+        text-align: center;
+      }
+    
+      .navbar-collapse {
+        position: absolute;
+        top: 114px;
+        right: 0;
+        flex-basis: 100%;
+        flex-grow: 1;
+        align-items: center;
+        background-color: #222121;
+        width: 100vw;
+      }
+    
+      .headerContacto ul{
+        display: none;
+      }
 
     .nombre{
         width: 70%;

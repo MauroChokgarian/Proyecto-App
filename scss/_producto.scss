@@ -8,7 +8,10 @@ html{
 .logoProducto{
     background-color: #222121;
     padding: 10px
+}
 
+.navbar{
+  display: none;
 }
 
 .headerProducto{
@@ -57,7 +60,7 @@ html{
 .imagenTuRanking{
     @include flexbox(flex, row, center);
     background-color: #000000;
-    padding: 40px 0px 20px 0px;
+    padding: 60px 0px 20px 0px;
 }
 .imagenRanking_in{
     width: 100%;
@@ -66,7 +69,7 @@ html{
     padding: 10px;
     img{
     display: flex;
-    width: 80%;
+    width: 70%;
     align-self: center;
     margin: auto;
 }
@@ -325,6 +328,13 @@ html{
 }
 
   /* Media Queries para pagina producto */
+  @media screen and (max-width:991px){
+    .logoProducto{
+      @include flexbox(flex, row, center);
+    }
+  }
+
+
   @media screen and (max-width:985px){
   .reverse-flex{
     display: flex;
@@ -399,13 +409,40 @@ html{
     }
     } 
 }
-@media screen and (max-width:500px){
-    .headerProducto li{
-      display: block;
-      font-size: 1.3rem;
-      padding-right: 10px;
-      padding-top: 20px;
-      text-align: center;
-    }
+@media screen and (max-width:575px){
+  .navbar{
+    display: flex;
+    background-color: #222121;
+  }
 
+  .navbar-toggler{
+    border-color: white;
+  }
+
+  .navbar-toggler-icon{
+    color: white !important;
+  }
+
+  .navbar-nav a{
+    color: white;
+  }
+
+  .navbar-nav li{
+    text-align: center;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 114px;
+    right: 0;
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    background-color: #222121;
+    width: 100vw;
+  }
+
+  .headerProducto ul{
+    display: none;
+  }
 }

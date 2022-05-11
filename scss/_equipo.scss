@@ -4,6 +4,11 @@
     background-color: #222121;
     padding: 10px;
   }
+
+  .navbar{
+    display: none;
+  }
+  
   
   .headerEquipo{
     @include flexbox(flex, row, space-around);
@@ -202,11 +207,15 @@
 
 /* Media Queries */
 
+  /* Media Queries para pagina producto */
+  @media screen and (max-width:991px){
+    .logoEquipo{
+      @include flexbox(flex, row, center);
+    }
+  }
+
 @media screen and (max-width:768px){
-  .headerEquipo ul{
-  @include flexbox(flex, column, center);
-  text-align: center;
-}
+
   .apiEquipo{
     h2{
     padding-left: 20px;
@@ -215,4 +224,42 @@
     padding-left: 20px;
   }
   } 
+}
+
+@media screen and (max-width:575px){
+  .navbar{
+    display: flex;
+    background-color: #222121;
+  }
+
+  .navbar-toggler{
+    border-color: white;
+  }
+
+  .navbar-toggler-icon{
+    color: white !important;
+  }
+
+  .navbar-nav a{
+    color: white;
+  }
+
+  .navbar-nav li{
+    text-align: center;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 114px;
+    right: 0;
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    background-color: #222121;
+    width: 100vw;
+  }
+
+  .headerEquipo ul{
+    display: none;
+  }
 }
